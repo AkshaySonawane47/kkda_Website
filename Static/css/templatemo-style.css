@@ -475,11 +475,9 @@ https://templatemo.com/tm-516-known
     background-image: url(../images/slider/dharmeshw-04.jpg);
 	background-position: center;
   }
-
   .home-slider .item-second {
     background-image: url(../images/slider/ganesh-05.jpg);
   }
-
   .home-slider .item-third {
     background-image: url(../images/slider/kkda-01.jpg);
   }
@@ -1143,6 +1141,13 @@ https://templatemo.com/tm-516-known
       display: block;
       margin: 0 auto;
     }
+
+    .alert{
+
+    border-left:#721C24 5px solid; 
+    border-radius: auto;
+    font-size: auto;
+
   }
 
 
@@ -1178,4 +1183,6 @@ https://templatemo.com/tm-516-known
       height: inherit;
     }
   }
-  
+}
+
+

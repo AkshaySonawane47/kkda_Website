@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,13 +34,25 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Home',
+    'django.contrib.sites',
+    # 'Home',
+
+
+    # allauth 
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # provider
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +70,7 @@ ROOT_URLCONF = 'kkda_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["Templates"],
+        'DIRS': [os.path.join(BASE_DIR, "Templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,6 +133,21 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = "/"
+
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    # '/kkda_website/kkda_website/static/',
+]
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     # '/var/www/static/',
+# ]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -127,10 +155,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #added manualy
-STATICFILES_DIRS = [
+# STATICFILES_DIRS = [
 
-    os.path.join(BASE_DIR, "Static"),
+#     os.path.join(BASE_DIR, "static"),
     # "/home/special.polls.com/polls/static",
     # "/home/polls.com/polls/static",
     # "/opt/webfiles/common",
-]
+# ]

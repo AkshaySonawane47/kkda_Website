@@ -4,7 +4,7 @@
 
     // PRE LOADER
     $(window).load(function(){
-      $('.preloader').fadeOut(1000); // set duration in brackets    
+      $('.preloader').fadeOut(800); // set duration in brackets    
     });
 
 
@@ -73,21 +73,22 @@
       }
     });
 
-    // function animateValue(obj, start, end, duration) {
-    //   let startTimestamp = null;
-    //   const step = (timestamp) => {
-    //     if (!startTimestamp) startTimestamp = timestamp;
-    //     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    //     obj.innerHTML = Math.floor(progress * (end - start) + start);
-    //     if (progress < 1) {
-    //       window.requestAnimationFrame(step);
-    //     }
-    //   };
-    //   window.requestAnimationFrame(step);
-    // }
+
+    function animateValue(obj, start, end, duration) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.innerHTML = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
     
-    // const obj = document.getElementById("value");
-    // animateValue(obj, 100, 0, 5000);
+    const obj = document.getElementById("value");
+    animateValue(obj, 100, 0, 5000);
 
 
     $('.count').each(function () {
@@ -102,7 +103,7 @@
       });
   });
 
-
+ 
     // SMOOTHSCROLL
     $(function() {
       $('.custom-navbar a, #home a').on('click', function(event) {
