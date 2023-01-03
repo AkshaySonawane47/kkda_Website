@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     # 'django.contrib.models',
+    'tinymce',
     
     
 
@@ -135,7 +136,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-Media_URL = 'Media/'
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 SITE_ID = 1
 

@@ -29,6 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Home.urls')),
     path('accounts/', include('allauth.urls')),
+    path('tinymce/',include('tinymce.urls')),
     # path('blog', include('blog.urls')),
     
     # path("home", views.home, name='contact'),
