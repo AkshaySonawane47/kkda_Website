@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    # 'Home',
+    # 'django.contrib.models',
+    
+    
 
 
     # allauth 
@@ -132,6 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+Media_URL = 'Media/'
 
 SITE_ID = 1
 

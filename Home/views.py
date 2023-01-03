@@ -2,6 +2,7 @@ from email import message
 from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from Home.models import Contact
+# from Home.models import Category , Post
 from django.contrib import messages
 
 
