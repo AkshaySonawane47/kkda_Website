@@ -2,7 +2,7 @@ from email import message
 from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from Home.models import Contact
-# from Home.models import Category , Post
+from Home.models import  Post
 from django.contrib import messages
 
 
@@ -28,4 +28,16 @@ def blog(request):
 def about(request):
     # message.success(request, "this is succesfull done.")
     return render(request,'about.html')
+    
+def base(request):
+    # message.success(request, "this is succesfull done.")
+
+
+    post=Post.objects.all()[:11]
+
+    data={
+        post: post
+    }
+
+    return render(request,'base.html')
     

@@ -2069,16 +2069,16 @@ span.email-notes {
 
 .copyright-text a:hover {
   text-decoration: underline;
-  color: #3EC1D5;
+  color: #000000;
 }
 
 .copyright-text a {
-  color: #444;
+  color: rgb(252, 249, 249);
 }
 
 .copyright>p {
   margin-bottom: 0;
-  color: #444;
+  color: rgb(20, 19, 19);
 }
 
 .copyright a,
