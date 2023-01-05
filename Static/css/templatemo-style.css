@@ -682,7 +682,7 @@ https://templatemo.com/tm-516-known
     border-radius: 2px;
     font-size: 16px;
     width: 30px;
-    height: 30px;
+    height: 50px;
     line-height: 30px;
     text-align: center;
     padding: 0;
@@ -722,7 +722,7 @@ https://templatemo.com/tm-516-known
   }
 
   .courses-detail {
-    padding: 25px 25px 15px 25px;
+    padding: 35px 35px 35px 35px;
   }
 
   .courses-detail h3 {

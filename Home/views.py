@@ -19,7 +19,11 @@ def home(request):
         home.save()
         messages.success(request, "Your Contact Message has been Sent ! Thank You " +name )
         # messages.success(request, 'Your Contact Message has been Sent!')
-    return render(request, 'index.html')
+
+    
+    post=Post.objects.all()
+    data={  'post': post    }
+    return render(request, 'index.html',data)
         
 def blog(request):
     # message.success(request, "this is succesfull done.")
@@ -32,12 +36,9 @@ def about(request):
 def base(request):
     # message.success(request, "this is succesfull done.")
 
-
-    post=Post.objects.all()[:11]
-
-    data={
-        post: post
-    }
-
-    return render(request,'base.html')
+    post=Post.objects.all()
+    data={  'post': post    }
     
+    return render(request,'base.html',data)
+    
+

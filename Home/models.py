@@ -22,7 +22,7 @@ class Category(models.Model):
     cat_id =models.AutoField(primary_key=True)
     title=models.CharField(max_length=100)
     description=models.TextField()
-    url =models.CharField(max_length=100)
+    Price =models.CharField(max_length=100)
     image =models.ImageField(upload_to='contents/')
     add_date=models.DateTimeField(auto_now_add=True, null=True)
 
@@ -39,13 +39,16 @@ class Post(models.Model):
     post_id=models.AutoField(primary_key=True)
     title=models.CharField(max_length=100)
     content= RichTextField(blank=True,null=True)
-    url=models.CharField( max_length=100)
+    Price=models.CharField( max_length=100)
     cat=models.ForeignKey(Category, on_delete=models.CASCADE)
     image=models.ImageField(upload_to='post/')
 
     def __str__(self):
         return self.title
 
+    @property
+    def Price(self):
+        return self.Price
     @property
     def cat(self):
         return self.cat

@@ -7,12 +7,13 @@ from Home.models import  Post
 
 #
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('image_tag','title','description','url','add_date')
+    list_display = ('image_tag','title','description','Price','add_date')
    
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('name','email','message')
     search_fields = ('name',)
+    list_per_page = 10
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title',)
