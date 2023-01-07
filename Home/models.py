@@ -1,6 +1,7 @@
 from django.db import models 
 from django.utils.html import format_html
 from ckeditor.fields import RichTextField
+from autoslug import AutoSlugField
 
 # from tinymce.models import HTMLField
 
@@ -16,7 +17,7 @@ class Contact(models.Model):
     def __str__(self):
         return self.name 
 
-    #catergory model
+    #catergory model 
 
 class Category(models.Model):
     cat_id =models.AutoField(primary_key=True)
@@ -39,16 +40,21 @@ class Post(models.Model):
     post_id=models.AutoField(primary_key=True)
     title=models.CharField(max_length=100)
     content= RichTextField(blank=True,null=True)
-    Price=models.CharField( max_length=100)
+    url=models.CharField( max_length=100)
     cat=models.ForeignKey(Category, on_delete=models.CASCADE)
     image=models.ImageField(upload_to='post/')
+    add_date=models.DateTimeField(auto_now_add=True,auto_now=False, null=True)
+    # add_time=models.DateTimeField(auto_now_add=True,auto_now=False)
+    post_slug =AutoSlugField(populate_from='title',unique=True,null=True,default=None)
+    
+
+    def image_tag(self):
+        return format_html('<img src="{}" style=" width:50; height:30px;"   />'.format(self.image.url))
 
     def __str__(self):
         return self.title
+    
 
-    @property
-    def Price(self):
-        return self.Price
     @property
     def cat(self):
         return self.cat

@@ -2,7 +2,7 @@ from email import message
 from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from Home.models import Contact
-from Home.models import  Post
+from Home.models import  Post,Category
 from django.contrib import messages
 
 
@@ -22,12 +22,16 @@ def home(request):
 
     
     post=Post.objects.all()
-    data={  'post': post    }
+    cat=Category.objects.all()
+    data={  'post': post ,
+            'cat': cat 
+       }
     return render(request, 'index.html',data)
+
         
 def blog(request):
     # message.success(request, "this is succesfull done.")
-    return HttpResponse("this is aboutpage")
+    return HttpResponse("this is aboutpage")  
 
 def about(request):
     # message.success(request, "this is succesfull done.")
@@ -40,5 +44,33 @@ def base(request):
     data={  'post': post    }
     
     return render(request,'base.html',data)
-    
 
+    # message.success(request, "this is succesfull done.")
+
+# def posts(request,id):
+#     pots = Post.objects.get(post_id=id)
+#     posts = Post.objects.filter(url=pots)
+#     context = { 'pots': pots, 'posts': posts}
+#     return render(request,'posts.html', context)    
+
+    # print(pots)
+def posts(request):
+    # message.success(request, "this is succesfull done.")
+
+    post=Post.objects.all()
+    data={  'post': post    }
+    
+    return render(request,'base.html',data)
+
+def demo(request):
+    # message.success(request, "this is succesfull done.")
+    return render(request,'demo.html') 
+
+
+# def base(request):
+#     # message.success(request, "this is succesfull done.")
+
+#     post=Post.objects.all()
+#     data={  'post': post    }
+    
+#     return render(request,'base.html',data)

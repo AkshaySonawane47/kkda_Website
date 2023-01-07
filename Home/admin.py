@@ -16,10 +16,10 @@ class ContactAdmin(admin.ModelAdmin):
     list_per_page = 10
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title',)
+    list_display = ('image_tag','title','add_date')  
     search_fields = ('title',)
     # list_filter = ('post_id',)  
-    list_per_page = 2
+    list_per_page = 4
 
 # @register(home)
 # class MaterialPersonAdmin(ModelAdmin):

@@ -54,6 +54,7 @@ https://templatemo.com/tm-516-known
                     </button>
                </div>
                     <!-- lOGO TEXT HERE -->
+                    <br>
                     <div class="navbar-brand">
                     <a href="#"><img src="static/images/kkda-logo.png" alt="" class="navbar-brand"></a>
                
@@ -175,6 +176,44 @@ https://templatemo.com/tm-516-known
      </section>
 
 
+
+
+
+
+
+     <section id="contact">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Popular Courses <small>Upgrade your skills with newest courses</small></h2>
+
+     {% for p in post %}
+    
+      <br>
+     {% comment %} <div class="col-md-6 col-sm-12"> {% endcomment %}
+          <div class="contact-image">
+               <img src="media/{{p.image}}" class="img-responsive" alt="Smiling Two Girls">
+          </div>
+           
+    
+
+          <h3><a href="#">{{p.title}}</a></h3>
+          <p>{{p.content | safe}}</p>
+          {% comment %} <button class="btn btn-primary">ReadMore..</button> {% endcomment %}
+          <br>
+     
+     {% endfor %}
+   
+
+                         </div>
+                    </div>
+                         </div>
+                         </div>
+     </section>
+
+
+
      <!-- ABOUT -->
      
      
@@ -198,7 +237,7 @@ https://templatemo.com/tm-516-known
                                         <div class="courses-thumb">
                                              <div class="courses-top">
                                                   <div class="courses-image">
-                                                       <img src="media/{{p.image}}" style="height:200px; width:350px; class="img-responsive" alt="">
+                                                       <img src="media/{{p.image}}" style="height:200px; width:350px;  alt="">
                                                   </div>
                                                   <div class="courses-date">
                                                        <span><i class="fa fa-calendar"></i> 12 / 7 / 2018</span>
