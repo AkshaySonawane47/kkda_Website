@@ -72,7 +72,12 @@ https://templatemo.com/tm-516-known
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                         {% if user.is_authenticated %}
+                         <li><br>Hello, {{user.username }}</li>
+                         <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
+                         {% else %}
                          <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                         {%endif%}
                     </ul>
                </div>
           </div>

@@ -56,7 +56,7 @@ https://templatemo.com/tm-516-known
                     <!-- lOGO TEXT HERE -->
                     <div class="navbar-brand">
                          <br>
-                    <a href="#"><img src="static/images/kkda-logo.png" alt="" class="navbar-brand"></a>
+                    <a href="#"><img src="static/images/kkda-logo.png" style="margin-left:-76px;" alt="" class="navbar-brand"></a>
                
                </div>
                <!-- <a href="index.html"><img src="images/kkda-logo.png" alt="" class="navbar-brand"></a> -->
@@ -72,7 +72,12 @@ https://templatemo.com/tm-516-known
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                         {% if user.is_authenticated %}
+                         <li><a>hello, {{user.username }}</a></li>
+                         <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
+                         {% else %}
                          <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                         {%endif%}
                     </ul>
                </div>
           </div>
@@ -88,7 +93,7 @@ https://templatemo.com/tm-516-known
                {% for message in messages %}
                <div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
                     <button type = "button" class = "close" data-dismiss = "alert">×</button>
-                    <strong>Success!</strong> {{ message }}
+                    <strong>'!</strong> {{ message }}
                  </div>
                  {% endfor %}
                  {% endif %}
@@ -210,26 +215,49 @@ https://templatemo.com/tm-516-known
                               </figure>
                          </div>
                     </div>
-
+                    <div>
+              
+          </div>
                     <div class="col-md-offset-1 col-md-4 col-sm-12">
                          <div class="entry-form">
-                              <form action="#" method="post">
+                              
+                              <form method="post">
+                                   {% csrf_token %}
+                                   {% for m in messages %}
+                              </h1>{{m}}</h1>
+                                 {% endfor %}
+                                   <br>
+                                   
                                    <h2>Signup today</h2>
                                    <button class="loginBtn loginBtn--facebook">
                                         Login with Facebook
-                                      </button>
-                                      
-                                      <button class="loginBtn loginBtn--google">
+                                   </button>
+                                   
+                                   <button class="loginBtn loginBtn--google">
                                         Login with Google
-                                      </button>
-                                   <input type="text" name="full name" class="form-control" placeholder="Full name" required="">
+                                   </button>
+                                   <br>
+                                   
+                                   <br>
+                                   {% comment %} <input type="text" name="username" class="form-control" placeholder="Enter UserName " required=""> {% endcomment %}
+                                   {% comment %} <input type="email" name="email" class="form-control" placeholder="Your email address" required=""> {% endcomment %}
+{% comment %} 
+                                   <input type="password" name="password" class="form-control" placeholder="Enter Password" required=""> {% endcomment %}
 
-                                   <input type="email" name="email" class="form-control" placeholder="Your email address" required="">
 
-                                   <input type="password" name="password" class="form-control" placeholder="Your password" required="">
-
-                                   <button class="submit-btn form-control" id="form-submit">Get started</button>
-                                   <p>Already have an account? <a href="#">Sign in</a>.</p>
+<br>
+                                   <a href="login" class="section-btn btn btn-default smoothScroll">Login From Here</a>
+<br>
+<br>
+<br>
+                                   <a href="register" class="section-btn btn btn-default smoothScroll">Register From Here</a>
+                                   {% comment %} <button href="login" class="section-btn btn btn-default smoothScroll" id="form-submit">Register Register From Here</button>     {% endcomment %}
+                                   {% comment %} <a href="register" class="section-btn btn btn-default smoothScroll">Register From Here</a> {% endcomment %}
+<br>
+<br>
+                                   {% comment %} <button type="submit" class="submit-btn form-control" id="form-submit">Register From Here</button> {% endcomment %}
+                                   <br>
+                                   <p>Read Terms and Conditions! <a href="register">Click Here</a>.</p>
                               </form>
                          </div>
                     </div>
@@ -422,7 +450,7 @@ https://templatemo.com/tm-516-known
                                                 
                                                   <h3><a href="post.html">{{p.title |truncatewords:10| safe }}</a></h3>
                                                   <p>{{p.content |truncatewords:12| safe}}</p>
-                                                  <button type="button" class="btn btn-primary"><a href="#Login" style="color: #fff;" ">Lgoin And ReadMore..</a></i></button></span>
+                                                  <button type="button" class="btn btn-primary"><a href="#Login" style="color: #fff;" >Lgoin And ReadMore..</a></i></button></span>
                                              </div>
 
                                              <div class="courses-info">

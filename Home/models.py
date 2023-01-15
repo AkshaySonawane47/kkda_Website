@@ -62,4 +62,21 @@ class Post(models.Model):
     @property
     def cat_id(self):
         return self.cat_id
-    
+
+
+
+#register form 
+
+class admission_registration(models.Model):
+    id=models.AutoField(primary_key=True)
+    firstname=models.CharField(max_length=50)
+    middlename = models.CharField(max_length=50)
+    lastname=models.CharField(max_length=50)
+    phone=models.CharField( max_length=15)
+    address=models.CharField(max_length=100)
+    email=models.CharField(max_length=100)
+    gender=models.CharField(max_length=10)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.email 

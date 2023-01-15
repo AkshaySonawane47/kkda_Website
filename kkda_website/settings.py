@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'ckeditor',
     # 'django.contrib.models',
+    
 
     
     
@@ -98,7 +99,7 @@ WSGI_APPLICATION = 'kkda_website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR , 'db.sqlite3'),
     }
 }
 
@@ -146,12 +147,15 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = "/"
+LOGIN_URL = "" 
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static'), 
     # '/kkda_website/kkda_website/static/',
 ]
+
+LOGIN_REDIRECT_URL = 'home'
 
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",

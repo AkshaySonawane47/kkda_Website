@@ -149,7 +149,7 @@ https://templatemo.com/tm-516-known
     outline: none;
   }
   .loginBtn:active {
-    box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 0 32px rgb(255, 255, 255);
   }
   
   
@@ -186,7 +186,7 @@ https://templatemo.com/tm-516-known
   }
 
   .entry-form {
-    background: #252020;
+    background: #07082a;
     border-radius: 100%;
     text-align: center;
     padding: 6em;
@@ -207,13 +207,14 @@ https://templatemo.com/tm-516-known
     box-shadow: none;
     height: 45px;
     margin: 10px 0;
+    color:#fff
   }
 
   .entry-form .submit-btn {
     background: #ffffff;
     border-radius: 50px;
     border: 0;
-    color: #252020;
+    color: #222121;
     width: 50%;
     height: 50px;
     margin: 30px auto;
@@ -226,12 +227,100 @@ https://templatemo.com/tm-516-known
   }
   .entry-form a {
     /* background: #3f51b5; */
-    color: #e7d615;
+    color: #03f8e8fc;
   }
+
+
+
+/* registration form  */
+
+
+
+  .container1 {  
+    padding: 21px;
+    background-color: lightblue;
+    margin-left: 1px;
+    padding-right: 31px;
+
+ 
+  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 10px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: rgb(242, 223, 187);  
+  outline: none;  
+}  
+ div {  
+   padding: 1px 0;  
+ }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 50%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1; 
+  background-color: #000; 
+}  
+
+
+
+
+
+
+
+
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+  }
+  .gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #84fab0;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+  }
+
+
+
+/* registration form end  */
+
+
+
+
+
+
 
   section {
     position: relative;
-    padding: 100px 0;
+    padding: 20px 0;
   }
 
   #team,
@@ -346,8 +435,8 @@ https://templatemo.com/tm-516-known
     font-weight: bold;
     line-height: 40px;
     width: 275px;
-    height: 174px;
-    margin: -76px;
+    height: 164px;
+    margin: -86px;
     margin-right: 38px;
     float: left;
   }
@@ -651,6 +740,7 @@ https://templatemo.com/tm-516-known
 
   .team-image img {
     width: 100%;
+    border-radius: 111px;
   }
 
   .team-thumb .social-icon {
@@ -1056,7 +1146,7 @@ https://templatemo.com/tm-516-known
   @media only screen and (max-width: 992px) {
     section,
     footer {
-      padding: 60px 0;
+      padding: 10px 0;
     }
 
     .home-slider .item {
@@ -1099,14 +1189,14 @@ https://templatemo.com/tm-516-known
       box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
       padding: 0px 40px;
       text-align: left;
-      margin-left: -5px;
+      margin-left: 0px;
     }
 
     .custom-navbar img {
       line-height: 40px;
       width: 287px;
       height: 116px;
-      padding: 0px 59px;
+      padding: 0px 46px;
       float: left;
       margin-top: 0px;
       /* display: none; */
@@ -1126,8 +1216,8 @@ https://templatemo.com/tm-516-known
       color: #252525;
       font-weight: 150;
       float: left;
-      height: 26px;
-      padding: 0px 7px;
+      height: 46px;
+      padding: 3px 18px 38px;
     }
 
     .custom-navbar .nav li a,
