@@ -8,6 +8,7 @@ from Home.models import admission_registration
 from django.contrib.auth.models import User,auth
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 
 
 
@@ -39,15 +40,16 @@ def about(request):
     return render(request,'about.html')
 
 
-@login_required(login_url='login') 
+# @login_required(login_url='login') 
 def base(request):
-    # message.success(request, "this is succesfull done.")
+#     # message.success(request, "this is succesfull done.")
 
-    post=Post.objects.all()
-    data={  'post': post    }
+#     post=Post.objects.all()
+#     data={  'post': post    }
     
-    return render(request,'base.html',data)
+    # return render(request,'base.html',data)
 
+    return render(request,'base.html')
     # message.success(request, "this is succesfull done.")
 
 # def posts(request,id):
@@ -56,18 +58,30 @@ def base(request):
 #     context = { 'pots': pots, 'posts': posts}
 #     return render(request,'posts.html', context)    
 
-    # print(pots)
-def posts(request):
+@login_required(login_url='home')
+def header(request):
     # message.success(request, "this is succesfull done.")
+    return render(request,'header.html') 
 
+
+@login_required(login_url='home')
+def home_2(request):
+    page = request.GET.get('page')
     post=Post.objects.all()
-    data={  'post': post    }
+    Paginators= Paginator(post,2)
+    final = Paginators.get_page(page)
+    totalpage =final.paginator.num_pages
     
-    return render(request,'base.html',data)
-
-def demo(request):
+    upload={  'post':final,'lastpage':totalpage,'totalpagelist':[n+1 for n in range(totalpage)] } 
+    
     # message.success(request, "this is succesfull done.")
-    return render(request,'demo.html') 
+    return render(request,'home_2.html',upload) 
+
+
+@login_required(login_url='home')
+def demo1(request):
+    # message.success(request, "this is succesfull done.")
+    return render(request,'demo1.html') 
 
 
 # def base(request):
@@ -90,17 +104,18 @@ def submit_form(request):
         address = request.POST.get('address')
         email = request.POST.get('email')
         if  User.objects.filter(email=email).exists():
-            messages.warning(request, "password and  user email wrong please type new email and password! ")
-            return redirect('demo.html')
+            messages.warning(request, "you are alredy submited form please Create New One and Use differnt Email id ") 
+            return redirect('demo1.html')
         else:
             print(firstname,middlename,lastname,gender,phone,address,email)
-            msg = "Registration Successfully Done ! Thank You " 
+            messages.success(request, "Registration Successfully Done! Thank You") 
+            msg = "Congratulation, Team will contacting you sortly! " 
             submit_form=admission_registration(firstname=firstname,middlename=middlename,lastname=lastname,gender=gender,phone=phone,address=address,email=email, date = datetime.today())
             submit_form.save()
-            return render(request,'demo.html',{'msg': msg})
-    else:
-        return HttpResponse("404 - not found")
-
+            return render(request,'demo1.html',{'msg': msg})
+    # else:
+        # return HttpResponse("404 - not found")
+    return render(request,'demo1.html')
     
 def register(request):
     
@@ -119,8 +134,9 @@ def register(request):
             Register.save()
             return redirect('index.html') 
         
-    return render(request,'registration.html')
-        
+    return render(request,'registration.html') 
+
+# @login_required(login_url='login') 
 def homelogin(request):
     # message.success(request, "this is succesfull done.")
     if request.method == 'POST':
@@ -145,8 +161,10 @@ def logout(request):
 
 
  
-
-
+# def password_change(request):
+#     user =request.user
+#     form = SetPasswordForm(user) 
+#     return render(request,'password_reset_confirm.html',{'form':form})  
 
 
 

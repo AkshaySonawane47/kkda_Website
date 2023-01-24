@@ -1,60 +1,35 @@
-
-{% comment %} <!DOCTYPE html>
-
-
-
-<html lang="en"> {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
      <title>Known - Education HTML Template</title>
+<!-- 
 
+Known Template 
 
-{% comment %} ////////////////////   upside    ////////////////////////// {% endcomment %}
+https://templatemo.com/tm-516-known
 
+-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/owl.carousel.css">
+<link rel="stylesheet" href="static/css/owl.theme.default.min.css">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- ======================================================= -->
-
-{% comment %} ////////////////   down side   ////////////////// {% endcomment %}
-
-     {% comment %} <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content=""> {% endcomment %}
-
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-     <link rel="stylesheet" href="static/css/bootstrap.min.css">
-     <link rel="stylesheet" href="static/css/font-awesome.min.css">
-     <link rel="stylesheet" href="static/css/owl.carousel.css">
-     <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
-
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="static/css/templatemo-style.css">
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="static/css/templatemo-style.css">
 <!-- Meta tags -->
 <meta charset = "utf-8">
 <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
- 
+
 
 </head>
-{% block body %}
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
      <!-- PRE LOADER -->
@@ -80,7 +55,8 @@
                </div>
                     <!-- lOGO TEXT HERE -->
                     <div class="navbar-brand">
-                    <a href="#"><img src="static/images/kkda-logo.png" alt="" class="navbar-brand"></a>
+                         <br>
+                    <a href="#"><img src="static/images/kkda-logo.png" style="margin-left:-76px;" alt="" class="navbar-brand"></a>
                
                </div>
                <!-- <a href="index.html"><img src="images/kkda-logo.png" alt="" class="navbar-brand"></a> -->
@@ -88,24 +64,26 @@
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="/home" class="smoothScroll">Home</a></li>
-                         <li><a href="#top" class="smoothScroll">About</a></li>
-                         <li><a href="#team" class="smoothScroll">Our Teachers</a></li>
+                         <li><a href="base" class="smoothScroll">Home</a></li>
+                         <li><a href="header" class="smoothScroll">Payments/Pricing</a></li>
+                         <li><a href="#top" class="smoothScroll">addmission form</a></li>
                          <li><a href="#courses" class="smoothScroll">Courses</a></li>
-                         <li><a href="#testimonial" class="smoothScroll">Contact</a></li>
+                         {% comment %} <li><a href="#testimonial" class="smoothScroll">Reviews</a></li> {% endcomment %}
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
-                         <ul class="nav navbar-nav navbar-right">
-                         <li><a href="home"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
-                    {% comment %} </ul>
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li> {% endcomment %}
+                         {% if user.is_authenticated %}
+                         <li><a>hello, {{user.username }}</a></li>
+                         <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
+                         {% else %}
+                         <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                         {%endif%}
                     </ul>
                </div>
           </div>
      </section>
 
-     {% comment %} <div class = "container"> {% endcomment %}
-        
+
      <!-- HOME -->
      <section id="home">
           <div class="row">
@@ -113,27 +91,26 @@
                {% for message in messages %}
                <div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
                     <button type = "button" class = "close" data-dismiss = "alert">×</button>
-                    <strong>Success!</strong> {{ message }}
+                    <strong>'!</strong> {{ message }}
                  </div>
                  {% endfor %}
                  {% endif %}
-                    <div class="owl-carousel owl-theme home-slider">
-                         
-                         <div class="item item-first">
-                              
+
+                 <div class="owl-carousel owl-theme home-slider">
+                         {% for c in cat %}
+                         <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});">                                                
                               <div class="caption">
-                                   <div class="container">
-                                        
+                                <div class="container">                                        
                                         <div class="col-md-6 col-sm-12">
-                                             <h1>Distance Learning Education Center</h1>
+                                             <h1>Distance Learning Education Center {{c.title}}</h1>
                                              <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
                                              <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
                                         </div>
-                                   </div>
+                                   </div> 
                               </div>
                          </div>
-
-                         <div class="item item-second">
+                         
+                         {% comment %} <div class="item item-second">
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
@@ -155,11 +132,27 @@
                                         </div>
                                    </div>
                               </div>
-                         </div>
+                         </div> {% endcomment %}
+                         {% endfor %}
                     </div>
           </div>
      </section>
 
+
+     <!-- FEATURE -->
+     <section id="feature">
+          <div class="container">
+               <div class="row">
+
+                   
+               </div>
+          </div>
+     </section>
+
+
+     <main id="main">
+  
+     
    <!-- ======= Blog Page ======= -->
    <div class="blog-page area-padding">
     <div class="container">
@@ -172,7 +165,9 @@
                 <div class="search-option">
                   <input type="text" placeholder="Search...">
                   <button class="button" type="submit">
-                    <i class="bi bi-search"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
                   </button>
                 </div>
               </form>
@@ -180,14 +175,28 @@
             </div>
             <div class="single-blog-page">
               <!-- recent start -->
-              <div class="left-blog">
+              <div class="right-blog">
                 <h4>recent post</h4>
+                {% comment %} {% for p in post %} {% endcomment %}
                 <div class="recent-post">
                   <!-- start single post -->
                   <div class="recent-single-post">
+                    <div class="post-img" style="height:24;">
+                      <a href="#">
+                        <img src="static/images/img/about/kkda-about-01.jpg" alt="" >
+                      </a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#">Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  {% comment %} {%endfor%} {% endcomment %}
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  {% comment %} <div class="recent-single-post">
                     <div class="post-img">
                       <a href="#">
-                        <img src="static/images/img/blog/1.jpg" alt="">
+                        <img src="static/images/img/blog/2.jpg" alt="">
                       </a>
                     </div>
                     <div class="pst-content">
@@ -199,7 +208,7 @@
                   <div class="recent-single-post">
                     <div class="post-img">
                       <a href="#">
-                        <img src="static/images/img/blog/1.jpg" alt="">
+                        <img src="static/images/img/blog/3.jpg" alt="">
                       </a>
                     </div>
                     <div class="pst-content">
@@ -211,26 +220,14 @@
                   <div class="recent-single-post">
                     <div class="post-img">
                       <a href="#">
-                        <img src="static/image/img/blog/3.jpg" alt="">
+                        <img src="static/images/img/blog/4.jpg" alt="">
                       </a>
                     </div>
                     <div class="pst-content">
                       <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
                     </div>
                   </div>
-                  <!-- End single post -->
-                  <!-- start single post -->
-                  <div class="recent-single-post">
-                    <div class="post-img">
-                      <a href="#">
-                        <img src="static/img/blog/4.jpg" alt="">
-                      </a>
-                    </div>
-                    <div class="pst-content">
-                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                    </div>
-                  </div>
-                  <!-- End single post -->
+                  <!-- End single post --> {% endcomment %}
                 </div>
               </div>
               <!-- recent end -->
@@ -318,6 +315,53 @@
                 </div>
               </div>
             </div>
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>archive</h4>
+                <ul>
+                  <li>
+                    <a href="#">07 July 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">29 June 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">13 May 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">20 March 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">09 Fabruary 2016</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+           
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>archive</h4>
+                <ul>
+                  <li>
+                    <a href="#">07 July 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">29 June 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">13 May 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">20 March 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">09 Fabruary 2016</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+           
+
           </div>
         </div>
         <!-- End left sidebar -->
@@ -325,10 +369,12 @@
         <div class="col-md-8 col-sm-8 col-xs-12">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
+              {% for p in post %}
               <div class="single-blog">
                 <div class="single-blog-img">
                   <a href="blog-details.html">
-                    <img src="static/img/blog/1.jpg" alt="">
+                    <br>
+                    <img src="media/{{p.image}}" alt="">
                   </a>
                 </div>
                 <div class="blog-meta">
@@ -337,28 +383,31 @@
                     <a href="#">11 comments</a>
                   </span>
                   <span class="date-type">
-                    <i class="bi bi-calendar"></i>2016-03-05 / 09:10:16
+                    <i class="bi bi-calendar"></i>{{p.add_date}}
                   </span>
                 </div>
                 <div class="blog-text">
                   <h4>
-                    <a href="#">Post my imagine Items</a>
+                    <a href="#">Post {{p.title}}</a>
                   </h4>
                   <p>
                     Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit.
                   </p>
                 </div>
+                
                 <span>
                   <a href="blog-details.html" class="ready-btn">Read more</a>
                 </span>
+                
+                {% endfor %}
               </div>
             </div>
             <!-- End single blog -->
-            <div class="col-md-12 col-sm-12 col-xs-12">
+            {% comment %} <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="single-blog">
                 <div class="single-blog-img">
                   <a href="blog-details.html">
-                    <img src="static/img/blog/2.jpg" alt="">
+                    <img src="static/images/img/blog/2.jpg" alt="">
                   </a>
                 </div>
                 <div class="blog-meta">
@@ -388,7 +437,7 @@
               <div class="single-blog">
                 <div class="single-blog-img">
                   <a href="blog-details.html">
-                    <img src="static/img/blog/3.jpg" alt="">
+                    <img src="static/images/img/blog/3.jpg" alt="">
                   </a>
                 </div>
                 <div class="blog-meta">
@@ -418,7 +467,7 @@
               <div class="single-blog">
                 <div class="single-blog-img">
                   <a href="blog-details.html">
-                    <img src="static/img/blog/4.jpg" alt="">
+                    <img src="static/images/img/blog/4.jpg" alt="">
                   </a>
                 </div>
                 <div class="blog-meta">
@@ -448,7 +497,7 @@
               <div class="single-blog">
                 <div class="single-blog-img">
                   <a href="blog-details.html">
-                    <img src="static/img/blog/5.jpg" alt="">
+                    <img src="assets/img/blog/5.jpg" alt="">
                   </a>
                 </div>
                 <div class="blog-meta">
@@ -472,15 +521,22 @@
                   <a href="blog-details.html" class="ready-btn">Read more</a>
                 </span>
               </div>
-            </div>
+            </div> {% endcomment %}
             <!-- End single blog -->
             <div class="blog-pagination">
               <ul class="pagination">
-                <li class="page-item"><a href="#" class="page-link">&lt;</a></li>
-                <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                <li class="page-item"><a href="#" class="page-link">&gt;</a></li>
+                {% if post.has_previous %}
+                <li class="page-item"><a href="home_2?page={{post.previous_page_number}}" class="page-link">&lt; Privious</a></li>
+                {%endif%}
+
+                {% for n in totalpagelist %}
+                <li class="page-item "><a href="?page={{n}}" class="page-link">{{n}}</a></li>
+                {%endfor%}
+                {% comment %} <li class="page-item"><a href="#" class="page-link">2</a></li>
+                <li class="page-item"><a href="#" class="page-link">3</a></li> {% endcomment %}
+                {% if post.has_next %}
+                <li class="page-item"><a href="home_2?page={{post.next_page_number}}" class="page-link">Next &gt;</a></li>
+                {%endif%}
               </ul>
             </div>
           </div>
@@ -582,20 +638,20 @@
   </div>
 </footer><!-- End  Footer -->
 
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
-<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="static/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="static/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="static/vendor/php-email-form/validate.js"></script>
+     <!-- SCRIPTS -->
+     <script src="static/js/jquery.js"></script>
+     <script src="static/js/bootstrap.min.js"></script>
+     <script src="static/js/owl.carousel.min.js"></script>
+     <script src="static/js/smoothscroll.js"></script>
+     <script src="static/js/custom.js"></script>
 
-<!-- Template Main JS File -->
-<script src="static/js/main.js"></script>
 
-     {% endblock body %}
+     <script>
+          if ( window.history.replaceState ) {
+              window.history.replaceState( null, null, window.location.href );
+          }
+      </script>
+
 </body>
-
 </html>

@@ -458,7 +458,7 @@ hr {
   }
 
   .custom-navbar .navbar-nav.navbar-right li a {
-    padding-right: 12px;
+    padding-right: 0px;
     padding-left: 12px;
   }
 
@@ -1418,10 +1418,18 @@ hr {
 .blog-page .banner-box {
   margin-bottom: 40px;
 }
+.area-padding {
+  padding: 70px 0px 80px;
+}
+
+.area-padding-2 {
+  padding: 70px 0px 50px;
+}
+
 
 .search-option input {
   border: medium none;
-  padding: 6px 15px;
+  padding: 3px 5px;
   width: 80%;
 }
 
@@ -1464,7 +1472,7 @@ hr {
   display: block;
 }
 
-.left-blog ul li a {
+.left-blog ul li a { 
   color: #444;
   display: block;
   font-size: 14px;
@@ -1504,10 +1512,19 @@ hr {
 
 .post-img {
   display: inline-block;
-  float: left;
+  /* float: left;
   padding: 0 5px;
-  width: 35%;
+  width: 35%; */
+  margin: 4px;
+  padding: 1px;
+  height: 66px;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 .pst-content {
   display: inline-block;

@@ -30,7 +30,6 @@ https://templatemo.com/tm-516-known
  
 
 </head>
-{% block content %}
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
      <!-- PRE LOADER -->
@@ -46,6 +45,7 @@ https://templatemo.com/tm-516-known
      <!-- MENU -->
      <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
           <div class="container">
+
                <div class="navbar-header">
                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                          <span class="icon icon-bar"></span>
@@ -55,7 +55,8 @@ https://templatemo.com/tm-516-known
                </div>
                     <!-- lOGO TEXT HERE -->
                     <div class="navbar-brand">
-                    <a href="#"><img src="static/images/kkda-logo.png" alt="" class="navbar-brand"></a>
+                         <br>
+                    <a href="#"><img src="static/images/kkda-logo.png" style="margin-left:-76px;" alt="" class="navbar-brand"></a>
                
                </div>
                <!-- <a href="index.html"><img src="images/kkda-logo.png" alt="" class="navbar-brand"></a> -->
@@ -63,41 +64,258 @@ https://templatemo.com/tm-516-known
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#top" class="smoothScroll">Home</a></li>
-                         <li><a href="/about" class="smoothScroll">About</a></li>
-                         <li><a href="#team" class="smoothScroll">Our Teachers</a></li>
+                         <li><a href="" class="smoothScroll">Home</a></li>
+                         <li><a href="#top" class="smoothScroll">Payments/Pricing</a></li>
+                         <li><a href="demo1" class="smoothScroll">addmission form</a></li>
                          <li><a href="#courses" class="smoothScroll">Courses</a></li>
-                         <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
+                         {% comment %} <li><a href="#testimonial" class="smoothScroll">Reviews</a></li> {% endcomment %}
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                         {% if user.is_authenticated %}
+                         <li><a>hello, {{user.username }}</a></li>
+                         <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
+                         {% else %}
                          <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                         {%endif%}
                     </ul>
                </div>
           </div>
      </section>
+
+ 
+
+
+     <!-- HOME -->
+     <section id="home">
+          <div class="row">
+               {% if messages %}
+               {% for message in messages %}
+               <div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
+                    <button type = "button" class = "close" data-dismiss = "alert">×</button>
+                    <strong>'!</strong> {{ message }}
+                 </div>
+                 {% endfor %}
+                 {% endif %}
+
+                 <div class="owl-carousel owl-theme home-slider">
+                         {% for c in cat %}
+                         <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});">                                                
+                              <div class="caption">
+                                <div class="container">                                        
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>Distance Learning Education Center {{c.title}}</h1>
+                                             <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
+                                             <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
+                                        </div>
+                                   </div> 
+                              </div>
+                         </div>
+                         
+                         {% comment %} <div class="item item-second">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>Start your journey with our practical courses</h1>
+                                             <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
+                                             <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>Efficient Learning Methods</h1>
+                                             <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
+                                             <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div> {% endcomment %}
+                         {% endfor %}
+                    </div>
+          </div>
+     </section>
+
+
+     <!-- FEATURE -->
+     <section id="feature">
+          <div class="container">
+               <div class="row">
+
+                   
+               </div>
+          </div>
+     </section>
+
+
+
+
+
+     <!-- <section id="feature"> -->
+          <section id="header">
+          <div class="container">
+               <div class="row">   
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Pricing <small>Find Your sutable course</small></h2>
+                         </div>
+                    </div>        
+                    <div class="col-md-4 col-sm-4">
+                         <div class="price-col">
+                         <div class="feature-thumb">
+                              <p>Starter</p>                                                
+                              <h3>₹1900/ month</h3>
+                              <ul>
+                                   <li>1 website asfs</li>
+                                   <li>1 website sdfasg eset</li>
+                                   <li>1 website asdtgtre</li>
+                                   <li>1 website aertr</li>
+                                   <li>1 website erter we4twet</li>
+                                   <li>1 website werterter</li>
+                                   <li>1 website erter</li> 
+                              </ul>
+                              <button>Get started</button>
+                         </div>
+                         </div>
+                    </div>
+<br>
+                    <div class="col-md-4 col-sm-4">
+                         <div class="price-col">
+                         <div class="feature-thumb">                   
+                                        <p>Intermediate</p>
+                                        <h3>₹1900/ month</h3>
+                                        <ul>
+                                             <li>1 website jhsgfsdfgia </li>
+                                             <li>1 website sadgag</li>
+                                             <li>1 website adadfgfdgfh</li>
+                                             <li>1 website efsggasdg </li>
+                                             <li>1 website adfgdfhdf</li>
+                                             <li>1 website adfhf</li>
+                                             <li>1 website dfhdfhad</li> 
+                                        </ul>
+                                        <button>Get started</button>
+                                   </div></div>
+                    </div>
+<br>
+                    <div class="col-md-4 col-sm-4">
+                         <div class="price-col">
+                         <div class="feature-thumb">                   
+                                   <p>Advance</p>
+                                   <h3>₹1900/ month</h3>
+                                   <ul>
+                                        <li>1 website </li>
+                                        <li>1 website </li>
+                                        <li>1 website </li>
+                                        <li>1 website </li>
+                                        <li>1 website </li>
+                                        <li>1 website </li>
+                                        <li>1 website </li> 
+                                   </ul>
+                                   <button>Get started</button>
+                              </div>
+                          </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
 <br>
 <br>
-{% endblock %}
- <!-- ======= Blog Page ======= -->
-  
- </body>
- 
- </html>
+<br>
 
 
 
- {% comment %} 
- 
- 
- basic        HYD     OYD 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- {% endcomment %}
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Headquarter</h2>
+                              </div>
+                              <address>
+                                   <p>1800 dapibus a tortor pretium,<br> Integer nisl dui, ABC 12000</p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2019 Company Name</p>
+                                   
+                                   <p>Design: TemplateMo</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+65 2244 1100, +66 1800 1100</p>
+                                   <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Quick Links</h2>
+                                   <ul>
+                                        <li><a href="#">Career</a></li>
+                                        <li><a href="#">Investor</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#">Refund Policy</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Newsletter Signup</h2>
+                              </div>
+                              <div>
+                                   <div class="form-group">
+                                        <form action="#" method="get">
+                                             <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="">
+                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
+                                        </form>
+                                        <span><sup>*</sup> Please note - we do not spam your email.</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="static/js/jquery.js"></script>
+     <script src="static/js/bootstrap.min.js"></script>
+     <script src="static/js/owl.carousel.min.js"></script>
+     <script src="static/js/smoothscroll.js"></script>
+     <script src="static/js/custom.js"></script>
+
+
+     <script>
+          if ( window.history.replaceState ) {
+              window.history.replaceState( null, null, window.location.href );
+          }
+      </script>
+
+</body>
+</html>

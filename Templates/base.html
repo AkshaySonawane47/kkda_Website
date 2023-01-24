@@ -65,15 +65,15 @@ https://templatemo.com/tm-516-known
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="#top" class="smoothScroll">Home</a></li>
-                         <li><a href="/about" class="smoothScroll">About</a></li>
-                         <li><a href="#team" class="smoothScroll">Our Teachers</a></li>
-                         <li><a href="#courses" class="smoothScroll">Courses</a></li>
-                         <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
+                         <li><a href="header" class="smoothScroll">Payments/Pricing</a></li>
+                         <li><a href="demo1" class="smoothScroll">addmission form</a></li>
+                         {% comment %} <li><a href="#courses" class="smoothScroll">Courses</a></li> {% endcomment %}
+                         <li><a href="#feature" class="smoothScroll">Abouts</a></li>
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                          {% if user.is_authenticated %}
-                         <li><br>Hello, {{user.username }}</li>
+                         <li><a href="home"> Hello, {{user.username }}</a></li>
                          <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
                          {% else %}
                          <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
@@ -93,7 +93,7 @@ https://templatemo.com/tm-516-known
                {% for message in messages %}
                <div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
                     <button type = "button" class = "close" data-dismiss = "alert">×</button>
-                    <strong>Success!</strong> {{ message }}
+                    <strong>!</strong> {{ message }}
                  </div>
                  {% endfor %}
                  {% endif %}
@@ -186,7 +186,7 @@ https://templatemo.com/tm-516-known
 
 
 
-     <section id="contact">
+     <section id="Read">
           <div class="container">
                <div class="row">
                     <div class="col-md-12 col-sm-12">

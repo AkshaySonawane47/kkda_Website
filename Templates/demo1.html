@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,17 +64,24 @@ https://templatemo.com/tm-516-known
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#top" class="smoothScroll">Home</a></li>
-                         <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li><a href="base" class="smoothScroll">Home</a></li>
+                         <li><a href="header" class="smoothScroll">Payments/Pricing</a></li>
+                         <li><a href="#top" class="smoothScroll">addmission form</a></li>
+                         <li><a href="#courses" class="smoothScroll">Courses</a></li>
+                         {% comment %} <li><a href="#testimonial" class="smoothScroll">Reviews</a></li> {% endcomment %}
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                         {% if user.is_authenticated %}
+                         <li><a>hello, {{user.username }}</a></li>
+                         <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
+                         {% else %}
                          <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                         {%endif%}
                     </ul>
                </div>
           </div>
      </section>
-
- 
 
 
      <!-- HOME -->
@@ -85,12 +91,12 @@ https://templatemo.com/tm-516-known
                {% for message in messages %}
                <div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
                     <button type = "button" class = "close" data-dismiss = "alert">×</button>
-                    <strong>!</strong> {{ message }}
+                    <strong>'!</strong> {{ message }}
                  </div>
                  {% endfor %}
                  {% endif %}
 
-                 {% comment %} <div class="owl-carousel owl-theme home-slider"> {% endcomment %}
+                 <div class="owl-carousel owl-theme home-slider">
                          {% for c in cat %}
                          <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});">                                                
                               <div class="caption">
@@ -129,101 +135,86 @@ https://templatemo.com/tm-516-known
                          </div> {% endcomment %}
                          {% endfor %}
                     </div>
-               </div>
-          </section>
-          
-          
-               <!-- ABOUT -->
-               <section id="Login">
-                    <div class="container">
-                         <div class="row">
-          
-                              <div class="col-md-6 col-sm-12">
-                                   <div class="about-info">
-                                        <h2>Start your journey to a better life with online practical courses</h2>
-          
-                                        <figure>
-                                             <span><i class="fa fa-users"></i></span>
-                                             <figcaption>
-                                                  <h3>Professional Trainers</h3>
-                                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                             </figcaption>
-                                        </figure>
-          
-                                        {% comment %} <figure>
-                                             <span><i class="fa fa-certificate"></i></span>
-                                             <figcaption>
-                                                  <h3>International Certifications</h3>
-                                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                             </figcaption>
-                                        </figure> {% endcomment %}
-          
-                                        <figure>
-                                             <span><i class="fa fa-bar-chart-o"></i></span>
-                                             <figcaption>
-                                                  <h3>Free for 3 months</h3>
-                                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                             </figcaption>
-                                        </figure>
-                                   </div>
-                              </div>
-                              <div>
-                        
-                                   {% for m in messages %}
-                              </h1>{{m}}</h1>
-                                 {% endfor %}
-                    </div>
-                              <div class="col-md-offset-1 col-md-4 col-sm-12">
-                                   <div class="entry-form">
-                                        
-                                        <form method="post">
-                                             {% csrf_token %}
-                                             <br>
-                                             
-                                             <h2>Signup today</h2>
-                                             <button class="loginBtn loginBtn--facebook">
-                                                  Login with Facebook
-                                             </button>
-                                             
-                                             <button class="loginBtn loginBtn--google">
-                                                  Login with Google
-                                             </button>
-                                             <br>
-                                             
-                                             <br>
-                                             <input type="text" name="username" class="form-control" placeholder="Enter UserName " required="">
-                                             {% comment %} <input type="email" name="email" class="form-control" placeholder="Your email address" required=""> {% endcomment %}
-          
-                                             <input type="password" name="password" class="form-control" placeholder="Enter Password" required="">
-                                             <p style="text-align:right;"><a href="password_reset">Forgotten your password?</a></p>
-                                             <button type="submit" class="submit-btn form-control" id="form-submit">Get started</button>
-                                             <p>don't have an account? <a href="register">Sign up</a>.</p>
-                                        </form>
-                                   </div>
-                              </div>
-          
-                         </div>
-                    </div>
-               </section>
-          
-     <!-- FEATURE -->
-     {% comment %} <section id="feature">
-          <div class="container">
-               {% comment %} <div class="row">
-
-               </div> {% endcomment %}
           </div>
-     </section> 
+     </section>
 
 
-
-
-     <!-- <section id="feature"> -->
+     <!-- FEATURE -->
+     <section id="feature">
           <div class="container">
-               <div class="row">  
-               </div>
-          </div> 
+               <div class="row">
+
                    
+               </div>
+          </div>
+     </section>
+
+<section id="form">
+{% if messages %}
+{% for message in messages %}
+<div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
+     <button type = "button" class = "close" data-dismiss = "alert">×</button>
+     <strong>Success!</strong> {{ message }}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+<section id="register">
+     <div class="container">
+          <div class="row">
+               <center>
+               {{msg}}
+          </center> 
+               <div class="col-md-offset-2 col-md-8 col-sm-24">
+               {% comment %} <section class="vh-50 gradient-custom"> {% endcomment %}
+                
+                    <form action="submit" method="post"> 
+                      {% csrf_token %}
+                         <div class="container1">  
+                         <center> 
+                          <h1> Student addmission Form</h1> 
+                         </center>  
+                         <hr>  
+                         <label>First Name</label>
+                         <input type="text" name="firstname" placeholder="Firstname" required />
+                       <label> Middlename: </label>   
+                       <input type="text" name="middlename" placeholder="Middlename" size="15" required />   
+                       <label> Lastname: </label>    
+                       <input type="text" name="lastname" placeholder="Lastname" size="15"required />   
+                         
+                       {% comment %} <label>Gender</label>
+                       <div><b>   Male  <input type="radio" value="male" name="gender" > <b>  Female   <input type="radio" value="female"  name="gender" ></div> {% endcomment %}
+                       <h4>Gender : </h4><br>  
+                       <input type="radio"  name="gender" value="male">
+                       <label>male</label>
+                       <input type="radio"  name="gender" value="female">
+                       <label >female</label>
+                       <input type="radio"  name="gender" value="other">
+                       <label >other</label>
+                                                 
+                       
+                      <br> <label>  Phone :</label>     
+                       <input type="text" name="phone" placeholder="phone no." size="15"/ required>   
+                       <label> Address: </label>    
+                       <input type="text" name="address" placeholder="Address" size="15"required />   
+                           
+                        <label for="email"><b>Email</b></label>  
+                        <input type="text" placeholder="Enter Email" name="email" required>  
+                         
+                           {% comment %} <label for="psw"><b>Password</b></label>  
+                           <input type="password" placeholder="Enter Password" name="password" required>  
+                         
+                           <label for="psw-repeat"><b>Re-type Password</b></label>  
+                           <input type="password" placeholder="Retype Password" name="password_repeat" required>   {% endcomment %}
+                           <button type="submit" class="registerbtn">Register</button>    
+                       </form>                          
+    
+</div>
+</div>
+
+</section>
+
+
      <!-- FOOTER -->
      <footer id="footer">
           <div class="container">

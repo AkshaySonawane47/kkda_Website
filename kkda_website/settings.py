@@ -148,6 +148,20 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = "" 
+DEBUG = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_POST = 587
+EMAIL_HOST_USER= 'akshay.sonawane0239@gmail.com'
+EMAIL_HOST_PASSWORD = 'jajsgdxjfpwklsdg'
+EMAIL_USE_TLS = True 
+DEFAULT_FROM_EMAIL = "akshay.sonawane0239@gmail.com" 
+ALLOWED_HOSTS = []
+
+
+
+
+
 
 
 STATICFILES_DIRS = [
