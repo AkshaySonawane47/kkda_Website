@@ -62,20 +62,19 @@ https://templatemo.com/tm-516-known
                <!-- <a href="index.html"><img src="images/kkda-logo.png" alt="" class="navbar-brand"></a> -->
 
                <!-- MENU LINKS -->
-               {% if user.is_authenticated %}
                <div class="collapse navbar-collapse">
+                    {% if user.is_authenticated %}
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="#top" class="smoothScroll">Home</a></li>
                          <li><a href="header" class="smoothScroll">Payments/Pricing</a></li>
                          <li><a href="demo" class="smoothScroll">addmission form</a></li>
-                         <li><a href="base" class="smoothScroll">Abouts</a></li>
-                         
+                         <li><a href="change-password.html" class="smoothScroll">change-password</a></li>
                          <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                          <li><a>hello, {{user.username }}</a></li>
                          <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
-                         {% else %}
+               {% else %}
                          <ul class="nav navbar-nav navbar-nav-first">
                               <li><a href="#top" class="smoothScroll">Home</a></li>
                               <li><a href="#" class="smoothScroll">About</a></li>
@@ -93,7 +92,6 @@ https://templatemo.com/tm-516-known
           </div>
      </section>
 
- 
 
 
      <!-- HOME -->
@@ -110,12 +108,12 @@ https://templatemo.com/tm-516-known
 
                  <div class="owl-carousel owl-theme home-slider">
                          {% for c in cat %}
-                         <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});">                                                
+                         <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});  height:357px;">                                                
                               <div class="caption">
                                 <div class="container">                                        
                                         <div class="col-md-6 col-sm-12">
-                                             <h1>Distance Learning Education Center {{c.title}}</h1>
-                                             <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
+                                             <h1>{{c.title}}</h1>
+                                             <h3>{{c.description}} </h3>
                                              <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
                                         </div>
                                    </div> 
@@ -278,6 +276,116 @@ https://templatemo.com/tm-516-known
 
 
 
+     <section id="team">
+          <div class="container">
+               <div class="row">
+                    <div class="section-title">
+                         <h2>Our Professional Services<small>Find Your sutable course</small></h2>
+                    </div>
+                        
+
+                    <div class="col-md-3 col-sm-6" >
+                         <div class="team-thumb" >
+                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
+                                   <img src="static/images/img/hero-carousel/kkda-01.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info" style="color: #252020;">
+                                   <h3 >Drawing and Instrument class</h3>
+                                   <span>Flute, Guitaar ukulele Instrument Play Basic to Advance Basic To Advance Regular Batche's</span>
+                                   {% comment %} <div class="feature-thumb"> {% endcomment %}
+                                        {% comment %} <div class="price-col">
+                                     
+                                             <a href="login" class=" btn  smoothScroll">Login From Here</a>
+
+                                        </div> {% endcomment %}
+                                   {% comment %} </div> {% endcomment %}
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
+                                   <img src="static/images/img/hero-carousel/kkda-Zumba-04.jpg" style=" border-radius: 1px; height:198px;" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info" style="color: #252020;">
+                                   <h3 >Zumba class</h3>
+                                   <span>Basic To Advance Regular Batche's 6:00am to 8:00am</span>
+                                   <h3 >Dance class</h3>
+                                   <span>Basic To Advance Regular Batche's </span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+{% comment %}                     
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
+                                   <img src="static/images/img/blog/kkda-news-03.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info" style="color: #252020;">
+                                   <h3 >Dance class</h3>
+                                   <span>Basic To Advance Regular Batche's </span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div> {% endcomment %}
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
+                                   <img src="static/images/img/blog/kkda-news-03.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info" style="color: #252020;">
+                                   <h3 >Event Choreography</h3>
+                                   <span>Wedding Sangeet, School, College, and all type Of Event Choreography and Event Management</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
+                                   <img src="static/images/img/hero-carousel/kkda-01.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info" style="color: #252020;">
+                                   <h3 >Costume and fanci dress </h3>
+                                   <span>all branded costume available contact us for more  </span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                         
+                    </div></div>
+
+
+               </div>
+          </div>
+     </section>
+
+{% comment %} 
      <!-- <section id="feature"> -->
           <div class="container">
                <div class="row">   
@@ -289,7 +397,7 @@ https://templatemo.com/tm-516-known
                     <div class="col-md-4 col-sm-4">
                          <div class="price-col">
                          <div class="feature-thumb">
-                              <p>Starter</p>                                                
+                              <p>Wedig</p>                                                
                               <h3>₹1900/ month</h3>
                               <ul>
                                    <li>1 website asfs</li>
@@ -344,7 +452,7 @@ https://templatemo.com/tm-516-known
 
                </div>
           </div>
-     </section>
+     </section> {% endcomment %}
 
 
      <!-- TEAM -->
@@ -358,7 +466,7 @@ https://templatemo.com/tm-516-known
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img src="static/images/img/testimonials/kkda-team-01.jpg" class="img-responsive" alt="">
+                                   <img src="static/images/img/testimonials/kkda-team-01.jpg" style= "height:200px; class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>Mark Wilson</h3>
@@ -375,52 +483,54 @@ https://templatemo.com/tm-516-known
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img src="static/images/img/testimonials/kkda-team-01.jpg" class="img-responsive" alt="">
+                                   <img src="static/images/img/testimonials/kkda-team-01.jpg" style= "height:200px; class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>Catherine</h3>
-                                   <span>Education is the key!</span>
+                                   <h3>Mark Wilson</h3>
+                                   <span>I love Teaching</span>
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-google"></a></li>
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">   
+                                   <img src="static/images/img/testimonials/kkda-team-02.PNG" style= "height:200px; class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h3>Mark Wilson</h3>
+                                   <span>I love Teaching</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
                                    <li><a href="#" class="fa fa-instagram"></a></li>
                               </ul>
                          </div>
                     </div>
 
+
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="static/images/img/testimonials/kkda-team-02.PNG" class="img-responsive" alt="">
+                              <div class="team-image">   
+                                   <img src="static/images/img/testimonials/kkda-team03.jpg" style= "height:200px; class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>Jessie Ca</h3>
-                                   <span>I like Online Courses</span>
+                                   <h3>Mark Wilson</h3>
+                                   <span>I love Teaching</span>
                               </div>
                               <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
                                    <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                   <li><a href="#" class="fa fa-linkedin"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
                               </ul>
                          </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="static/images/img/testimonials/kkda-team03.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Andrew Berti</h3>
-                                   <span>Learning is fun</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-google"></a></li>
-                                   <li><a href="#" class="fa fa-behance"></a></li>
-                              </ul>
-                         </div>
-                    </div>
 
                </div>
           </div>
@@ -447,8 +557,8 @@ https://templatemo.com/tm-516-known
                                    <div class="item">
                                         <div class="courses-thumb">
                                              <div class="courses-top">
-                                                  <div class="courses-image" style="width:90px;">
-                                                       <img src="media/{{p.image}}" style="height:199px; width:338px; class="img-responsive" alt="">
+                                                  <div class="courses-image" >
+                                                       <img src="media/{{p.image}}"  style="width:350px; height:250px" class="img-responsive" alt="">
                                                   </div>
                                                   <div class="courses-date">
                                                        <span><i class="fa fa-calendar"></i> {{p.add_date}}</span>
@@ -765,7 +875,7 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-6 col-sm-12">
                          <div class="contact-image">
-                              <img src="static/images/contact-image.jpg" class="img-responsive" alt="Smiling Two Girls">
+                              <img src="static/images/img/hero-carousel/kkda-02.JPG" class="img-responsive" alt="Smiling Two Girls">
                          </div>
                     </div>
 

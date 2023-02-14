@@ -7,14 +7,13 @@ from django.contrib import messages
 from Home.models import admission_registration 
 from django.contrib.auth.models import User,auth
 from django.contrib.auth import authenticate,login,logout
-from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required 
+from django.core.paginator import Paginator 
 
 
 
 # Create your views here.
 
-   
 def home(request):  
 
     if request.method == "POST":
@@ -58,13 +57,38 @@ def base(request):
 #     context = { 'pots': pots, 'posts': posts}
 #     return render(request,'posts.html', context)    
 
-@login_required(login_url='home')
-def header(request):
+@login_required(login_url='login')
+def dance(request):
     # message.success(request, "this is succesfull done.")
-    return render(request,'header.html') 
+    return render(request,'dance.html') 
+
+@login_required(login_url='login')
+def music(request):
+    # message.success(request, "this is succesfull done.")
+    return render(request,'music.html')
+
+@login_required(login_url='login')
+def wedding(request):
+    # message.success(request, "this is succesfull done.")
+    return render(request,'wedding.html') 
+
+@login_required(login_url='login')
+def zumba(request):
+    # message.success(request, "this is succesfull done.")
+    return render(request,'zumba.html') 
+
+@login_required(login_url='login')
+def costume(request):
+    # message.success(request, "this is succesfull done.")
+    return render(request,'costume.html') 
+
+@login_required(login_url='login')
+def personal_choreography(request):
+    # message.success(request, "this is succesfull done.")
+    return render(request,'personal_choreography.html') 
 
 
-@login_required(login_url='home')
+@login_required(login_url='login')
 def home_2(request):
     page = request.GET.get('page')
     post=Post.objects.all()
@@ -78,7 +102,7 @@ def home_2(request):
     return render(request,'home_2.html',upload) 
 
 
-@login_required(login_url='home')
+@login_required(login_url='login')
 def demo1(request):
     # message.success(request, "this is succesfull done.")
     return render(request,'demo1.html') 
@@ -161,10 +185,10 @@ def logout(request):
 
 
  
-# def password_change(request):
-#     user =request.user
-#     form = SetPasswordForm(user) 
-#     return render(request,'password_reset_confirm.html',{'form':form})  
+def password_change(request):
+    user =request.user
+    form = SetPasswordForm(user) 
+    return render(request,'password_reset_confirm.html',{'form':form})  
 
 
 

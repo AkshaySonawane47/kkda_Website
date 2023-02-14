@@ -146,21 +146,18 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = ""
 LOGIN_URL = "" 
-DEBUG = True
+# DEBUG = True
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_POST = 587
-EMAIL_HOST_USER= 'akshay.sonawane0239@gmail.com'
-EMAIL_HOST_PASSWORD = 'jajsgdxjfpwklsdg'
+EMAIL_HOST_USER= 'akshay.kkda@gmail.com'
+EMAIL_HOST_PASSWORD = 'shxatdzcgpqslbbu'
 EMAIL_USE_TLS = True 
 DEFAULT_FROM_EMAIL = "akshay.sonawane0239@gmail.com" 
 ALLOWED_HOSTS = []
-
-
-
-
 
 
 

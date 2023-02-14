@@ -64,14 +64,33 @@ https://templatemo.com/tm-516-known
 
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
+                    {% if user.is_authenticated %}
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="#top" class="smoothScroll">Home</a></li>
-                         <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li><a href="header" class="smoothScroll">Payments/Pricing</a></li>
+                         <li><a href="demo" class="smoothScroll">addmission form</a></li>
+                         <li><a href="change-password.html" class="smoothScroll">change-password</a></li>
+                         
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                         <li><a>hello, {{user.username }}</a></li>
+                         <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
+                         {% else %}
+                         <ul class="nav navbar-nav navbar-nav-first">
+                              <li><a href="#top" class="smoothScroll">Home</a></li>
+                              <li><a href="#" class="smoothScroll">About</a></li>
+                              <li><a href="#team" class="smoothScroll">Our Teachers</a></li>
+                              <li><a href="#courses" class="smoothScroll">Courses</a></li>
+                              <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
+                              <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                         </ul>
+                         <ul class="nav navbar-nav navbar-right">
                          <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                         </ul>
                     </ul>
                </div>
+               {%endif%}
           </div>
      </section>
 
