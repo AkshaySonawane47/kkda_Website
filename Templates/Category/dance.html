@@ -158,11 +158,11 @@ https://templatemo.com/tm-516-known
                               <div class="col-md-4 col-sm-4">
                                    <div class="item">
                                         <div class="tst-image">
-                                             <div class="team-img">
+                                             {% comment %} <div class="team-img"> {% endcomment %}
                                                   <a href="#">
                                                     <video width="260px" height="390" autoplay loop muted src="static/videos/kkda.mp4"></video>
                                                   </a></div>
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <div class="tst-author">
                                              <h4>Offline Classes</h4>
                                              <span>Start Your Journey Now</span>
@@ -181,11 +181,36 @@ https://templatemo.com/tm-516-known
                               <div class="col-md-4 col-sm-4">
                                    <div class="item">
                                         <div class="tst-image">
-                                             <div class="team-img">
+                                             {% comment %} <div class="team-img"> {% endcomment %}
+                                                  <a href="#">
+                                                    <video width="260px" height="390" autoplay loop muted src="static/videos/kkda-3.mp4"></video>
+                                                  </a>
+                                             </div>
+                                        
+                                        <div class="tst-author">
+                                             <h4>Footwork Dance</h4>
+                                             <span>Learn Dance From Expert</span>
+                                        </div>
+                                        {% comment %} <p>Nam eget mi eu ante faucibus viverra nec sed magna. Vivamus viverra sapien ex, elementum varius ex sagittis vel.</p> {% endcomment %}
+                                        <div class="tst-rating">
+                                             <i class="fa fa-star"></i>
+                                             <i class="fa fa-star"></i>
+                                             <i class="fa fa-star"></i>
+                                             <i class="fa fa-star"></i>
+                                        </div>
+                                   </div>
+                              </div>
+
+           
+
+                              <div class="col-md-4 col-sm-4">
+                                   <div class="item">
+                                        <div class="tst-image">
+                                             {% comment %} <div class="team-img"> {% endcomment %}
                                                   <a href="#">
                                                     <video width="260px" height="390" autoplay loop muted src="static/videos/kkda-02.mp4"></video>
                                                   </a></div>
-                                        </div>
+                                        {% comment %} </div> {% endcomment %}
                                         <div class="tst-author">
                                              <h4>KKDA-LOGO</h4>
                                              <span>For more Click The Belowe social icon</span>
@@ -201,7 +226,8 @@ https://templatemo.com/tm-516-known
 
                               <div class="col-md-4 col-sm-4">
                                    <div class="item">
-                                        <div class="team-img">
+                                        <div class="tst-image">
+                                        {% comment %} <div class="team-img"> {% endcomment %}
                                              <a href="#">
                                                <video width="260px" height="390" autoplay loop muted src="static/videos/kkda_winner's.mp4"></video>
                                              </a></div>
@@ -220,28 +246,7 @@ https://templatemo.com/tm-516-known
                                    </div>
                               </div>
 
-                              <div class="col-md-4 col-sm-4">
-                                   <div class="item">
-                                        <div class="tst-image">
-                                             <div class="team-img">
-                                                  <a href="https://www.instagram.com/reel/Ck8fqkqDrt3/?igshid=YmMyMTA2M2Y=">
-                                                    <video width="260px" height="390" autoplay loop muted src="static/videos/kkda-3.mp4"></video>
-                                                  </a></div>
-                                        </div>
-                                        <div class="tst-author">
-                                             <h4>Footwork Dance</h4>
-                                             <span>Learn Dance From Expert</span>
-                                        </div>
-                                        {% comment %} <p>Nam eget mi eu ante faucibus viverra nec sed magna. Vivamus viverra sapien ex, elementum varius ex sagittis vel.</p> {% endcomment %}
-                                        <div class="tst-rating">
-                                             <i class="fa fa-star"></i>
-                                             <i class="fa fa-star"></i>
-                                             <i class="fa fa-star"></i>
-                                             <i class="fa fa-star"></i>
-                                        </div>
-                                   </div>
-                              </div>
-
+                              
                          </div>
 
                </div>
@@ -276,7 +281,7 @@ https://templatemo.com/tm-516-known
                          <div class="price-col">
                          <div class="feature-thumb">
                               <p>Starter</p>                                                
-                              <h3>₹1900/ month</h3>
+                              <h3>22/ month</h3>
                               <ul>
                                    <li>1 website asfs</li>
                                    <li>1 website sdfasg eset</li>
@@ -286,12 +291,16 @@ https://templatemo.com/tm-516-known
                                    <li>1 website werterter</li>
                                    <li>1 website erter</li> 
                               </ul>
-                              <button>Get started</button>
+                              <form method="POST" action='submit'>
+                               {% csrf_token %}
+                                 <button type="submit" class="submit-btn form-control" id="form-submit">Get started</button>
+                              </form>
                          </div>
                          </div>
                     </div>
 <br>
                     <div class="col-md-4 col-sm-4">
+                         {% comment %} {% for product in products %} {% endcomment %}
                          <div class="price-col">
                          <div class="feature-thumb">                   
                                         <p>Intermediate</p>
@@ -304,16 +313,18 @@ https://templatemo.com/tm-516-known
                                              <li>1 website adfgdfhdf</li>
                                              <li>1 website adfhf</li>
                                              <li>1 website dfhdfhad</li> 
-                                        </ul>
-                                        <button>Get started</button>
-                                   </div></div>
+                                        </ul> 
+                                        <a href='order'><button>Get started</button></a>
+                                   </div>
+                                   </div>
+                              {% comment %} {% endfor %} {% endcomment %}
                     </div>
 <br>
                     <div class="col-md-4 col-sm-4">
                          <div class="price-col">
                          <div class="feature-thumb">                   
                                    <p>Advance</p>
-                                   <h3>₹1900/ month</h3>
+                                   <h3>₹2900/ month</h3>
                                    <ul>
                                         <li>1 website </li>
                                         <li>1 website </li>
@@ -323,7 +334,9 @@ https://templatemo.com/tm-516-known
                                         <li>1 website </li>
                                         <li>1 website </li> 
                                    </ul>
-                                   <button>Get started</button>
+                                   
+                                   <a href='checkout'>
+                                        <button>Get started</button></a>
                               </div>
                           </div>
                     </div>

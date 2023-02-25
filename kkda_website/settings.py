@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'instamojo',
     'material',
     'material.admin',
     'Home.apps.HomeConfig',
@@ -178,6 +179,17 @@ LOGIN_REDIRECT_URL = 'home'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# STRIPE_SECRET_KEY = 'pk_test_51Mbb3XSBFpVSIJRAEEm7k5LqwHyEQTYFEAEMhalMqi9fYH73GANaql7ADaDLGvAT5WgfIqNKrOKXFPGMsf2qRCYz00NuIl6Efa'
+# STRIPE_PUBLISHABLE_KEY = 'sk_test_51Mbb3XSBFpVSIJRAW4YLBzE4ZOaDYKSYNHSh0ZJc5mf6TKQ0kqZ3W0LRoB4T7LwUPC8oLmCdJBQLNx1zSRt105RT00E8FtB1NV'
+
+RAZORPAY_API_KEY = 'rzp_test_cFFpCNmI0yg0an'
+RAZORPAY_API_SECRET_KEY = 'gKOQi6eDtEn3nJD0EBnWvZJy' 
+
+
+
+
+# SALT = '538a4ee0372049df9497bda9d4e707d4'
 
 #added manualy
 # STATICFILES_DIRS = [

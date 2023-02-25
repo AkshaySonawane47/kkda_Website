@@ -175,21 +175,29 @@ https://templatemo.com/tm-516-known
                           <h1> Student addmission Form</h1> 
                          </center>  
                          <hr>  
+                         {{Dance_Session.Level}}
                          <label>First Name</label>
                          <input type="text" name="firstname" placeholder="Firstname" required />
                        <label> Middlename: </label>   
                        <input type="text" name="middlename" placeholder="Middlename" size="15" required />   
                        <label> Lastname: </label>    
-                       <input type="text" name="lastname" placeholder="Lastname" size="15"required />   
-                         
+                       <input type="text" name="lastname" placeholder="Lastname" size="15"required /> 
+
+                         {% comment %} <label>Choise the Level </label>
+                       <select name="Level"  style="height:45px; width:100% ;"  >
+                         <option selected>Open this select menu</option>
+                         <option  value="Basic">Basic</option>
+                         <option  value="Intermediate">Intermediate</option>
+                         <option  value="Advance">Advance</option>
+                       </select> {% endcomment %}
                        {% comment %} <label>Gender</label>
                        <div><b>   Male  <input type="radio" value="male" name="gender" > <b>  Female   <input type="radio" value="female"  name="gender" ></div> {% endcomment %}
-                       <h4>Gender : </h4><br>  
-                       <input type="radio"  name="gender" value="male">
+                       <h4>Gender : </h4>  
+                       <input type="radio"  name="gender" value="male" required>
                        <label>male</label>
-                       <input type="radio"  name="gender" value="female">
+                       <input type="radio"  name="gender" value="female" required>
                        <label >female</label>
-                       <input type="radio"  name="gender" value="other">
+                       <input type="radio"  name="gender" value="other" required>
                        <label >other</label>
                                                  
                        
