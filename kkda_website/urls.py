@@ -18,7 +18,7 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf import Settings
-from Home import views
+from Home.admin import Admin_site
 
  
 
@@ -28,8 +28,10 @@ admin.site.site_title = "Krishnkala Dance Academy"
 admin.site.index_title = "Krishnkala Dance Academy"
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Admin_site/', Admin_site.urls),
     path('', include('Home.urls')),
     path('accounts/', include('allauth.urls')),
+    # path('', include('app.urls')),
   
     # path('posts',views.posts, name='post.html')
 

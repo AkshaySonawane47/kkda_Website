@@ -23,7 +23,7 @@ https://templatemo.com/tm-516-known
      <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="static/css/templatemo-style.css">
+     <link rel="stylesheet" href="static/css/templatemo-style.css"> 
 <!-- Meta tags -->
 <meta charset = "utf-8">
 <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
@@ -97,48 +97,255 @@ https://templatemo.com/tm-516-known
                  </div>
                  {% endfor %}
                  {% endif %}
-
-                 <div class="owl-carousel owl-theme home-slider">
-                         {% for c in cat %}
-                         <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});">                                                
-                              <div class="caption">
-                                <div class="container">                                        
-                                        <div class="col-md-6 col-sm-12">
-                                             <h1>Distance Learning Education Center {{c.title}}</h1>
-                                             <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
-                                             <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
-                                        </div>
-                                   </div> 
-                              </div>
-                         </div>
+                 
+                 
+               </div>
+               
+               <div class="col-md-10">
+                    <img src="\static\images\slider-image2.jpg" class="img" >
+                    <p class="carousel-caption">WELCOME TO <br><span>Krishnakala</span> MUSIC WORLD<br><br>
+                         <a href="#header" class="section-btn btn btn-default smoothScroll">Scroll Down</a>
+                    </p>
                          
-                         {% comment %} <div class="item item-second">
-                              <div class="caption">
-                                   <div class="container">
-                                        <div class="col-md-6 col-sm-12">
-                                             <h1>Start your journey with our practical courses</h1>
-                                             <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
-                                             <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="item item-third">
-                              <div class="caption">
-                                   <div class="container">
-                                        <div class="col-md-6 col-sm-12">
-                                             <h1>Efficient Learning Methods</h1>
-                                             <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
-                                             <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div> {% endcomment %}
-                         {% endfor %}
-                    </div>
+                    
+               </div>
+               
+               
           </div>
+          
+          </div>
+       
      </section>
+
+
+
+
+     <style>
+     .img {
+     width:100%;
+     height:555px;
+     z-index: 0;
+     padding-left:195px;
+     }
+     .carousel-caption span{
+          color:#3ec1d5;
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1;
+          font-family: 'Muli', sans-serif;
+     }
+     .carousel-caption{
+     right: 34%;
+      left:7%;
+     padding-bottom: 74px;
+     }
+     .text-over-img {
+     z-index:1;
+     font-size: 1.2em
+     margin-top: -100px;
+     }
+     @media (max-width: 767px) {
+     .carousel-caption {
+     right: 53%;
+     left: 5%;
+     top: 26%;
+     }
+     .music {
+          position: relative;
+          width: 385px;
+          height: 48px;
+          border: 8px solid $color2;
+          border-bottom: 0px;
+          border-top-left-radius: 110px;
+     border-top-right-radius: 110px;
+     }
+     .img{
+          height:251px;
+          padding-left:0px;
+     }
+     }
+
+{% comment %} 
+     $color1: #1a1e21; // background color
+$color2: #bebebe; // music icon border color {% endcomment %}
+
+     @mixin box-shadow() {
+          box-shadow: inset 0px 0px 16px -2px rgba(0,0,0,0.15);
+     }
+
+     {% comment %} body {
+     height: 100vh;
+          margin: 0;
+     background-color: $color1;
+     font-family: "ubuntu", Arial, sans-serif;
+     overflow-x: hidden;
+     display: grid;
+     place-items: center;
+     } {% endcomment %}
+
+     .music {
+          position: relative;	
+          width: 180px;
+          height: 45px;
+          border: 8px solid $color2;
+          border-bottom: 0px;
+          border-top-left-radius: 110px;
+     border-top-right-radius: 110px;
+          
+          &:before, &:after {
+               content: '';
+          position: absolute;
+               bottom: -20px;
+               width: 40px;
+               height: 82px;
+               background-color: $color2;
+               border-radius: 15px;
+          }
+          
+          &:before {
+               right: -25px;
+          }
+          
+          &:after {
+               left: -25px;
+          }
+     }
+
+     .line {
+          position: absolute;
+          width: 6px;
+          min-height: 30px;
+          transition: .5s;
+     animation: equalize 4s 0s infinite;
+     animation-timing-function: linear;
+     vertical-align: middle;
+          bottom: 0 !important;
+          @include box-shadow;
+     }
+
+     .line1 {
+          left: 30%;
+          bottom: 0px;
+          animation-delay: -1.9s;
+          background-color: #ff5e50;
+     }
+
+     .line2 {
+          left: 40%;
+          height: 60px;
+          bottom: -15px;
+          animation-delay: -2.9s;
+          background-color: #a64de6;
+     }
+
+     .line3 {
+          left: 50%;
+          height: 30px;
+          bottom: -1.5px;
+          animation-delay: -3.9s;
+          background-color: #5968dc;
+     }
+
+     .line4 {
+          left: 60%;
+          height: 65px;
+          bottom: -16px;
+          animation-delay: -4.9s;
+          background-color: #27c8f8;
+     }
+
+     .line5 {
+          left: 70%;
+          height: 60px;
+          bottom: -12px;
+          animation-delay: -5.9s;
+          background-color: #cc60b5;
+     }
+
+
+     @keyframes equalize {
+     0% {
+     height: 48px;
+     }
+     4% {
+     height: 42px;
+     }
+     8% {
+     height: 40px;
+     }
+     12% {
+     height: 30px;
+     }
+     16% {
+     height: 20px;
+     }
+     20% {
+     height: 30px;
+     }
+     24% {
+     height: 40px;
+     }
+     28% {
+     height: 10px;
+     }
+     32% {
+     height: 40px;
+     }
+     36% {
+     height: 48px;
+     }
+     40% {
+     height: 20px;
+     }
+     44% {
+     height: 40px;
+     }
+     48% {
+     height: 48px;
+     }
+     52% {
+     height: 30px;
+     }
+     56% {
+     height: 10px;
+     }
+     60% {
+     height: 30px;
+     }
+     64% {
+     height: 48px;
+     }
+     68% {
+     height: 30px;
+     }
+     72% {
+     height: 48px;
+     }
+     76% {
+     height: 20px;
+     }
+     80% {
+     height: 48px;
+     }
+     84% {
+     height: 38px;
+     }
+     88% {
+     height: 48px;
+     }
+     92% {
+     height: 20px;
+     }
+     96% {
+     height: 48px;
+     }
+     100% {
+     height: 48px;
+     }
+     }
+     </style>       
+
+
 
 
      <!-- FEATURE -->
@@ -146,7 +353,14 @@ https://templatemo.com/tm-516-known
           <div class="container">
                <div class="row">
 
-                   
+                    <div class='music'>
+                         <span class='line line1'></span>
+                         <span class='line line2'></span>
+                         <span class='line line3'></span>
+                         <span class='line line4'></span>
+                         <span class='line line5'></span>
+                       </div>
+                       
                </div>
           </div>
      </section>
@@ -157,6 +371,7 @@ https://templatemo.com/tm-516-known
 
      <!-- <section id="feature"> -->
           <section id="header">
+               
           <div class="container">
                <div class="row">   
                     <div class="col-md-12 col-sm-12">
@@ -167,18 +382,20 @@ https://templatemo.com/tm-516-known
                     <div class="col-md-4 col-sm-4">
                          <div class="price-col">
                          <div class="feature-thumb">
-                              <p>Starter</p>                                                
-                              <h3>₹1900/ month</h3>
+                              <p>Basic Course</p>                                                
+                              <h3>₹2900/ 3Months</h3>
                               <ul>
-                                   <li>1 website asfs</li>
-                                   <li>1 website sdfasg eset</li>
+                                   <li>3 to 7 Year kids 5:00pm to 6:00pm</li>
+                                   <li>1 website asdtgtr </li>
                                    <li>1 website asdtgtre</li>
                                    <li>1 website aertr</li>
                                    <li>1 website erter we4twet</li>
                                    <li>1 website werterter</li>
                                    <li>1 website erter</li> 
                               </ul>
-                              <button>Get started</button>
+                              
+                              <a href='checkout'>
+                                   <button>Get started</button></a>
                          </div>
                          </div>
                     </div>
@@ -197,7 +414,9 @@ https://templatemo.com/tm-516-known
                                              <li>1 website adfhf</li>
                                              <li>1 website dfhdfhad</li> 
                                         </ul>
-                                        <button>Get started</button>
+                                         
+                                   <a href='checkout'>
+                                        <button>Get started</button></a>
                                    </div></div>
                     </div>
 <br>
@@ -215,7 +434,9 @@ https://templatemo.com/tm-516-known
                                         <li>1 website </li>
                                         <li>1 website </li> 
                                    </ul>
-                                   <button>Get started</button>
+                                   
+                                   <a href='checkout'>
+                                        <button>Get started</button></a>
                               </div>
                           </div>
                     </div>
@@ -243,7 +464,7 @@ https://templatemo.com/tm-516-known
                   <h2><span>Krishnakala</span>DanceAcademy</h2>
                 </div>
   
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                <p>"Krishnakala dance academy(KKDA) born in February 2009 with a mission to enable anyone and everyone to dance and provide a platform to learn, practice, execute and experience DANCE as a way of life. KKDA is one of the leading dance companies of Dhule with its dance studio at Shirpur. The studio of KKDA is known as “Krishnakala Dance Academy”. The service offered by KKDA are: • Group Classes • Private Lessons • Choreographies • Corporate Workshops and • Event Performances.</p>
                 <div class="footer-icons">
                   <ul>
                     <li>
@@ -269,12 +490,13 @@ https://templatemo.com/tm-516-known
               <div class="footer-head">
                 <h4>information</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                    Krishnakala Dance Acadmy in Shirpur is situated right Behind Ashirwad Hospital..
+                    <br>plot no.43,shlok hospital bassment, behind ashirwad hospita, Hira Nagar, Sahyadri Nagar, Shirpur-Warwade, Maharashtra 425405
                 </p>
                 <div class="footer-contacts">
-                  <p><span>Tel:</span> +123 456 789</p>
-                  <p><span>Email:</span> contact@example.com</p>
-                  <p><span>Working Hours:</span> 9am-5pm</p>
+                  <p><span>Phone:</span> 9096237900</p>
+                  <p><span>Email:</span> krishnakaladance1@gmail.com </p>
+                  <p><span>Working Hours:</span> 10am-9pm</p>
                 </div>
               </div>
             </div>
@@ -291,7 +513,7 @@ https://templatemo.com/tm-516-known
                   <a href="#"><img src="static/images/img/portfolio/3.jpg" alt=""></a>
                   <a href="#"><img src="static/images/img/portfolio/kkda-03.jpg" alt=""></a>
                   <a href="#"><img src="static/images/img/portfolio/6.jpg" alt=""></a>
-                  <a href="#"><img src="static/images/img/portfolio/6.jpg" alt=""></a>
+                  <a href="#"><img src="static/images/img/portfolio/6.jpg" alt=""></a> 
                 </div>
               </div>
             </div>
@@ -305,7 +527,7 @@ https://templatemo.com/tm-516-known
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="copyright text-center">
               <p>
-                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
+                &copy; Copyright <strong>KrishnakalaDanceAcademy</strong>. All Rights Reserved
               </p>
             </div>
             <div class="credits">
@@ -315,7 +537,7 @@ https://templatemo.com/tm-516-known
               Licensing information: https://bootstrapmade.com/license/
               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
             -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              {% comment %} Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> {% endcomment %}
             </div>
           </div>
         </div>
@@ -329,7 +551,7 @@ https://templatemo.com/tm-516-known
        <script src="static/js/bootstrap.min.js"></script>
        <script src="static/js/owl.carousel.min.js"></script>
        <script src="static/js/smoothscroll.js"></script>
-       <script src="static/js/custom.js"></script>
+       <script src="static/js/custom.js"></script> 
   
   
        <script>

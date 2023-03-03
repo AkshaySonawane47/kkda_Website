@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'instamojo',
     'material',
     'material.admin',
     'Home.apps.HomeConfig',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'ckeditor',
+    'embed_video',
     # 'django.contrib.models',
     
 
@@ -107,7 +109,7 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
+AUTH_PASSWORD_VALIDATORS = [ 
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
@@ -133,6 +135,7 @@ TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
@@ -178,6 +181,17 @@ LOGIN_REDIRECT_URL = 'home'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# STRIPE_SECRET_KEY = 'pk_test_51Mbb3XSBFpVSIJRAEEm7k5LqwHyEQTYFEAEMhalMqi9fYH73GANaql7ADaDLGvAT5WgfIqNKrOKXFPGMsf2qRCYz00NuIl6Efa'
+# STRIPE_PUBLISHABLE_KEY = 'sk_test_51Mbb3XSBFpVSIJRAW4YLBzE4ZOaDYKSYNHSh0ZJc5mf6TKQ0kqZ3W0LRoB4T7LwUPC8oLmCdJBQLNx1zSRt105RT00E8FtB1NV'
+
+RAZORPAY_API_KEY = 'rzp_test_cFFpCNmI0yg0an'
+RAZORPAY_API_SECRET_KEY = 'gKOQi6eDtEn3nJD0EBnWvZJy' 
+
+
+
+
+# SALT = '538a4ee0372049df9497bda9d4e707d4'
 
 #added manualy
 # STATICFILES_DIRS = [

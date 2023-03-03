@@ -1,0 +1,65 @@
+  <div class="container home_msg">
+    <center>
+    {% if user.is_authenticated %}
+      <form action="submit_2" method="POST"> 
+      {% csrf_token %}
+      <br>
+      <br>
+      <h2>Hi {{ user }}! To pay, click on this button <br><br>
+        <p>Basic-Batch RS. = {{amount}}</p>
+        <button type="submit_2" id="rzp-button1" class="btn btn-success" data-bind-href="pricing">Payment</button></h2>
+        <br>
+{% comment %} 
+        <button id="rzp-button1">Pay</button> {% endcomment %}
+
+
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+        var options = {
+            "key": "{{ RAZORPAY_API_KEY}}", // Enter the Key ID generated from the Dashboard
+           // "amount": "{{data.amount}}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          //  "currency": "INR",
+          
+            "name": "KrishnaKalaDanceAdacemy", //your business name
+            "description": "Test Transaction",
+            "image": "https://example.com/your_logo",
+            "order_id": "{{order_id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response){
+                alert(response.razorpay_payment_id);
+                alert(response.razorpay_order_id);
+                alert(response.razorpay_signature)
+            },
+            "prefill": {
+                "name": "{{user}}", //your customer's name
+                "email": "{{email}}",
+                "contact": "9000000009"
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response){
+                alert(response.error.code);
+                alert(response.error.description);
+                alert(response.error.source);
+                alert(response.error.step);
+                alert(response.error.reason);
+                alert(response.error.metadata.order_id);
+                alert(response.error.metadata.payment_id);
+        });
+        document.getElementById('rzp-button1').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+        </script>
+
+     </form>
+    {% else %}
+      <h2>You're not logged in...</h2><a href="{% url 'login' %}" class="btn btn-secondary">Log in</a>
+
+    {% endif %}
+  </div>

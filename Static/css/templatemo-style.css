@@ -529,7 +529,7 @@ hr {
     font-size: 14px;
     font-weight: 3;
     margin: 0;
-    padding: 9px 0 30px 0;
+    padding: 125px 0 30px 0;
     text-align: left;
   }
 
@@ -645,8 +645,8 @@ hr {
 }
 .price-col{
   background: #41c89b;
-  padding: 4% 5%;
-  border-radius:  10px;
+  padding: 4% 2%;
+  border-radius:  6px;
   color: #fff;
   text-align: center;
   grid-gap: 25px;
@@ -658,12 +658,12 @@ hr {
 }
 .price-col ul{
   text-align: left;
-  margin: 15px 0;
+  margin: 15px -21px;
   color: rgb(240, 240, 240);
   /* list-style: none; */
 }
 .price-col ul li{
-  margin: 10px 0;
+  margin: 15px -18px;
 }
 .price-col ul li::before{
   text-align: left;
@@ -719,6 +719,7 @@ hr {
     height: 50px;
     line-height: 50px;
     text-align: center;
+    border-color: #101010;
   }
 
 
@@ -732,15 +733,19 @@ hr {
     position: relative;
     overflow: hidden;
     text-align: left;
+   
   }
 
   .team-info {
-    padding: 20px 30px;
+    padding: 10px 15px;
   }
 
   .team-image img {
-    width: 100%;
-    border-radius: 111px;
+    width: 320px;
+    border-radius: 50%;
+    /* width: 50px; */
+    height: 200px;
+    padding-left: 30px;
   }
 
   .team-thumb .social-icon {
@@ -749,7 +754,7 @@ hr {
   }
 
   .team-thumb .social-icon li a {
-    background: #ffffff;
+    background: #ffffff00;
     color: #252020;
     color: #080808f9;
   }
@@ -764,7 +769,7 @@ hr {
   -----------------------------------------*/
 
   #courses .section-title {
-    text-align: center;
+    text-align: left;
   }
 
   #courses .owl-theme .owl-nav {
@@ -897,9 +902,9 @@ hr {
   -----------------------------------------*/
 
   #testimonial .item {
-    background: #ffffff;
-    margin: 20px 0;
-    padding: 4em 3em;
+    background: #ffffff75;
+    margin: 0px 0;
+    padding: 1em 1em;
     text-align: left;
   }
 
@@ -931,9 +936,9 @@ hr {
   }
 
   .tst-image img {
-    border-radius: 80px;
-    width: 100px !important;
-    height: 4000px;
+    border-radius: 100%;
+    width: 140px !important;
+    height: 150px;
     margin-right: 15px;
   }
 
@@ -1160,6 +1165,12 @@ hr {
     .team-thumb,
     .footer-info {
       margin-bottom: 50px;
+
+    }
+    .team-thumb{
+      width: 320px;
+      padding-left: 30px;
+
     }
 
     .contact-image {
@@ -1259,7 +1270,7 @@ hr {
     }
 
     #testimonial .item {
-      padding: 2em;
+      padding: 1em;
     }
 
     .contact-image {
@@ -1891,11 +1902,11 @@ span.email-notes {
   color: #444;
   display: block;
   font-size: 16px;
-  height: 40px;
+  height: 37px;
   line-height: 38px;
   margin-right: 5px;
   text-align: center;
-  width: 40px;
+  width: 37px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2517,4 +2528,41 @@ span.email-notes {
   font-weight: 600;
   padding-bottom: 10px;
   text-transform: uppercase;
+}
+
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+/* Base.html */
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+
+.div1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+
+.div2 {
+  width: 300px;
+  height: 100px;  
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
 }

@@ -1,3 +1,4 @@
+{% load embed_video_tags%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +12,11 @@ https://templatemo.com/tm-516-known
 
 -->
      <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     {% comment %} <meta http-equiv="X-UA-Compatible" content="IE=Edge"> {% endcomment %}
      <meta name="description" content="">
      <meta name="keywords" content="">
      <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> {% endcomment %}
 
      <link rel="stylesheet" href="static/css/bootstrap.min.css">
      <link rel="stylesheet" href="static/css/font-awesome.min.css">
@@ -108,7 +109,9 @@ https://templatemo.com/tm-516-known
 
                  <div class="owl-carousel owl-theme home-slider">
                          {% for c in cat %}
-                         <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});  height:357px;">                                                
+                         <div class"home-slider item item-first" style="background-image: url(../media/{{c.image}}); width:372; height:357px;
+                         transform: translateX(0%);
+                         background-position: center;">                                                
                               <div class="caption">
                                 <div class="container">                                        
                                         <div class="col-md-6 col-sm-12">
@@ -159,7 +162,8 @@ https://templatemo.com/tm-516-known
                          <div class="feature-thumb">
                               <span class="count">15</span>
                               <h3>Year Of Experience</h3>
-                              <p>including  education HTML Bootstrap Template. You can download and use this for your website.</p>
+                              <p>Krishnakala Dance Academy Is Establishment in 2010. We have a great experience so far.
+                                   Below We have listed all of our class description.</p>
                          </div>
                          </div>
                     </div>
@@ -167,9 +171,9 @@ https://templatemo.com/tm-516-known
                     <div class="col-md-4 col-sm-4">
                          <div id="shiva">
                          <div class="feature-thumb">
-                              <span class="count">21000</span>
+                              <span class="count">2100</span>
                               <h3>People trained</h3>
-                              <p>Known is free education HTML Bootstrap Template. You can download and use this for your website.</p>
+                              <p>We have classes from children aged 4 year and Above. at all ability levels, from beginner to competitive.</p>
                          </div>
                          </div>
                     </div>
@@ -196,28 +200,33 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-6 col-sm-12">
                          <div class="about-info">
-                              <h2>Start your journey to a better life with online practical courses</h2>
+                              <h2>Start your journey to do for all ability Level with Practicing </h2>
 
                               <figure>
-                                   <span><i class="fa fa-users"></i></span>
                                    <figcaption>
-                                        <h3>Professional Trainers</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
+                                   <span>
+                                        <h3>
+                                        <img src="static/images/img/dancing.png" alt="" style="width:55px;"></img></span> Professional Training</h3>
+                                        <p>Our dance Class offers incredible instruction for Student's of all ages. Whether you’re interested in DANCE, MUSIC, ZUMBA or any other.</p>
+                                   </figcaption>
+                              </figure>
+                              
+                              <figure>
+                                   <figcaption>
+                                   <span>
+                                        <h3> 
+                                        <img src="static/images/img/diploma.gif" alt="" style="width:55px;"></img>
+                                        </span> Professional Certifications</h3>
+                                        <p>Our classes for both dance & fitness are designed to motivate, develop and inspire people of all ages. And Certificate We provide you after your completion course</p>
                                    </figcaption>
                               </figure>
 
                               <figure>
-                                   <span><i class="fa fa-certificate"></i></span>
                                    <figcaption>
-                                        <h3>International Certifications</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
-                                   </figcaption>
-                              </figure>
-
-                              <figure>
-                                   <span><i class="fa fa-bar-chart-o"></i></span>
-                                   <figcaption>
-                                        <h3>Free for 3 months</h3>
+                                        <span>
+                                        <h3>
+                                        <i class="fa fa-certificate" style="font-size:36px;"></i></img> </span>  Professional Workshop's</h3>
+                                   {% comment %} <p>--------------------------------enter text------------------------------------------------.</p> {% endcomment %}
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
                                    </figcaption>
                               </figure>
@@ -276,6 +285,7 @@ https://templatemo.com/tm-516-known
 
 
 
+
      <section id="team">
           <div class="container">
                <div class="row">
@@ -283,15 +293,20 @@ https://templatemo.com/tm-516-known
                          <h2>Our Professional Services<small>Find Your sutable course</small></h2>
                     </div>
                         
-
-                    <div class="col-md-3 col-sm-6" >
+ 
+                    <div class="col-md-3 col-sm-6" >             
                          <div class="team-thumb" >
-                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
-                                   <img src="static/images/img/hero-carousel/kkda-01.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
+                              <div class="team-image" style="height:150px; width:312px; padding-left:1px; border-radius: 5px;">
+                                   <img src="static/images/img/portfolio/1.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
                               </div>
                               <div class="team-info" style="color: #252020;">
-                                   <h3 >Drawing and Instrument class</h3>
-                                   <span>Flute, Guitaar ukulele Instrument Play Basic to Advance Basic To Advance Regular Batche's</span>
+                                   <h3 style="font-size:px;">Music & Drawing classes </h3>
+                                   Basic To Advance Batche's
+                                   <span><h3 style="font-size:15px;"><b>Drawing class</b></h3>
+                                   <span >Students will explore basic art, drawing, painting's etc.</span>
+                                   
+                                   <span><h3 style="font-size:15px;"><b>Music Instrument class</b></h3>
+                                   <span>Flute, Guitar, Ukulele, Instrument class. time Evening 6:00pm to 8:00pm</span>
                                    {% comment %} <div class="feature-thumb"> {% endcomment %}
                                         {% comment %} <div class="price-col">
                                      
@@ -303,21 +318,28 @@ https://templatemo.com/tm-516-known
                               <ul class="social-icon">
                                    <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
                                    <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a>
+                                   {% comment %} </li><button style="color:3f3f3;">follow</button> {% endcomment %}
                               </ul>
                          </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
-                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
+                              <div class="team-image" style="height:150px; width:272px; padding-left:2px; border-radius: 5px;">
+                                  <center>
                                    <img src="static/images/img/hero-carousel/kkda-Zumba-04.jpg" style=" border-radius: 1px; height:198px;" class="img-responsive" alt="">
+                                  </center>
                               </div>
                               <div class="team-info" style="color: #252020;">
-                                   <h3 >Zumba class</h3>
-                                   <span>Basic To Advance Regular Batche's 6:00am to 8:00am</span>
-                                   <h3 >Dance class</h3>
-                                   <span>Basic To Advance Regular Batche's </span>
+                                   <h3>Regular Classes</h3>
+                                   Basic To Advance Batche's
+                                   <span><h3 style="font-size:15px;"><b>Zumba class</b></h3>
+                                   <span>ladies Batch <br>
+                                        Time 6:00am to 8:00am</span>
+                                   <span><h3 style="font-size:15px;"><b>
+                                        Dance class</b></h3>
+                                   <span>Kid's Batch(3 to 7 Age) <br>Time 5:00pm To 6:00pm <br>(8 and Above All Age)<br>Time 6:00pm To 9:00pm </span>
                               </div>
                               <ul class="social-icon">
                                    <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
@@ -350,8 +372,12 @@ https://templatemo.com/tm-516-known
                                    <img src="static/images/img/blog/kkda-news-03.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
                               </div>
                               <div class="team-info" style="color: #252020;">
-                                   <h3 >Event Choreography</h3>
-                                   <span>Wedding Sangeet, School, College, and all type Of Event Choreography and Event Management</span>
+                                   <h3 style="font-size:18px;"><b>Event Choreography</b></h3>
+                                    make your Event more enjoyable and Memorable 
+                                   <span><h3 style="font-size:12px;"><b>1) Wedding Choreography</b></h3>
+                                    Couple Dance, family Dance, Solo dances </span>
+                                   <span><h3 style="font-size:12px;"><b>2) School Annual Choreography</b></h3>
+                                   <span>School, College, and all type Of Dance Choreography</span>
                               </div>
                               <ul class="social-icon">
                                    <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
@@ -362,14 +388,15 @@ https://templatemo.com/tm-516-known
                     </div>
 
                     
+
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
-                              <div class="team-image" style="height:150px; width:300px; border-radius: 1px;">
+                              <div class="team-image" style="height:150px; width:312px; border-radius: 1px;">
                                    <img src="static/images/img/hero-carousel/kkda-01.jpg" style=" border-radius: 1px; height:150px;" class="img-responsive" alt="">
                               </div>
                               <div class="team-info" style="color: #252020;">
-                                   <h3 >Costume and fanci dress </h3>
-                                   <span>all branded costume available contact us for more  </span>
+                                   <h3 >Event Management </h3>
+                                   <span> Costume and fanci dress all branded costume available contact us for more  </span>
                               </div>
                               <ul class="social-icon">
                                    <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
@@ -455,86 +482,6 @@ https://templatemo.com/tm-516-known
      </section> {% endcomment %}
 
 
-     <!-- TEAM -->
-     <section id="team">
-          <div class="container">
-               <div class="row">
-                         <div class="text">
-                              <h2>Teachers <small>Meet Professional Trainers</small></h2>
-                         </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="static/images/img/testimonials/kkda-team-01.jpg" style= "height:200px; class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Mark Wilson</h3>
-                                   <span>I love Teaching</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="static/images/img/testimonials/kkda-team-01.jpg" style= "height:200px; class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Mark Wilson</h3>
-                                   <span>I love Teaching</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">   
-                                   <img src="static/images/img/testimonials/kkda-team-02.PNG" style= "height:200px; class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Mark Wilson</h3>
-                                   <span>I love Teaching</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">   
-                                   <img src="static/images/img/testimonials/kkda-team03.jpg" style= "height:200px; class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Mark Wilson</h3>
-                                   <span>I love Teaching</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-
-               </div>
-          </div>
-     </section>
 
 
 
@@ -548,7 +495,7 @@ https://templatemo.com/tm-516-known
                 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Popular Courses <small>Upgrade your skills with KrishnakalaDanceAcademy</small></h2>
+                              <h2>News And Updates <small>All New Post Of KrishnakalaDanceAcademy</small></h2>
                          </div>
                          
                          <div class="owl-carousel owl-theme owl-courses">
@@ -720,24 +667,140 @@ https://templatemo.com/tm-516-known
      </section>
     
 
+
+     <!-- TEAM -->
+     <section id="team">
+          <div class="container">
+               <div class="row">
+                         <div class="text">
+                              <h2>Teachers <small>Meet Professional Trainers</small></h2>
+                         </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb" style="background: #20f5ff00;border: 1px solid;  ">
+                              <div class="team-imag">
+                                   <center>
+                                             <div class="tst-image">
+                                                  <img src="static/images/img/testimonials/kkda-team-01.jpg" class="img-responsive" alt="">
+                                             </div>
+
+                                   {% comment %} <img src="static/images/img/testimonials/kkda-team-01.jpg" alt="Avatar"  style="border-radius: 50%; height:150;" > {% endcomment %}
+                                  
+                              </center>
+                                   {% comment %} <img src="static/images/img/testimonials/kkda-team-01.jpg" style= "height:200px; class="img-responsive" alt=""> {% endcomment %}
+                              </div>
+                              <div class="team-info">
+                                   <h3>Mr. Prashant Bagul</h3>
+                                   <span>Founder, Director,<br> Choreographer</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb" style="background: #20f5ff00;border: 1px solid; ">
+                              <div class="team-imag">
+                                   <center>
+                                        <div class="tst-image">
+                                        <img src="static/images/img/testimonials/kkda-team03.jpg" class="img-responsive" alt="">
+                                   </center>
+                                   {% comment %} <img src="static/images/img/testimonials/kkda-team-01.jpg" style= "height:200px; class="img-responsive" alt=""> {% endcomment %}
+                              </div>
+                              <div class="team-info">
+                                   <h3>Mr. Pankaj Bagul</h3>
+                                   <span>Senior Trainer, <br>Choreographer</span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb" style="background: #20f5ff00;border: 1px solid; ">
+                              <div class="team-imag">  
+                                   <center>
+                                        <div class="tst-image">
+                                             <img src="static/images/img/testimonials/kkda-team-02.PNG" class="img-responsive" alt="">
+                                        </div>
+
+                              {% comment %} <img src="static/images/img/testimonials/kkda-team-01.jpg" alt="Avatar"  style="border-radius: 50%; height:150;" > {% endcomment %}
+                             
+                         </center>
+                                   {% comment %} <img src="static/images/img/testimonials/kkda-team03.jpg" style= "height:200px; class="img-responsive" alt=""> {% endcomment %}
+                              </div>
+                              <div class="team-info">
+                                   <h3>Mr. Rohit Bagul </h3> 
+                                   <span>Senior Choreographer of 'KrishnakalaDanceAcademy'
+                                        
+                                   </span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb" style="background: #20f5ff00;border: 2px solid; ">
+                              <div class="team-imag">  
+                                   <center>
+                                        <div class="tst-image">
+                                             <img src="static/images/img/testimonials/Sagar_wagh.PNG" class="img-responsive" alt="">
+                                        </div>
+
+                              {% comment %} <img src="static/images/img/testimonials/kkda-team-01.jpg" alt="Avatar"  style="border-radius: 50%; height:150;" > {% endcomment %}
+                             
+                         </center>
+                                   {% comment %} <img src="static/images/img/testimonials/kkda-team03.jpg" style= "height:200px; class="img-responsive" alt=""> {% endcomment %}
+                              </div>
+                              <div class="team-info">
+                                   <h3>Mr. Sagar Wagh</h3> 
+                                   <span>Assistance Choreographer at 'KrishnakalaDanceAcademy'
+                                        
+                                   </span>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+
+               </div>
+          </div>
+     </section>
+
+
      <!-- TESTIMONIAL -->
-     <section id="testimonial">
+     <section id="testimonial" style="background: #50a8db0d;">
           <div class="container">
                <div class="row">
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Student Reviews <small>from around the world</small></h2>
+                              <h2>KKDA-Team <small>supporting Team Member </small></h2>
                          </div>
-
+                         
                          <div class="owl-carousel owl-theme owl-client">
+                              {% for cho in choreographer %} 
                               <div class="col-md-4 col-sm-4">
                                    <div class="item">
                                         <div class="tst-image">
-                                             <img src="static/images/tst-image1.jpg" class="img-responsive" alt="">
+                                             <img src="media/{{cho.image}}" class="img-responsive" alt="">
                                         </div>
                                         <div class="tst-author">
-                                             <h4>Jackson</h4>
-                                             <span>Shopify Developer</span>
+                                             <h4>{{cho.Name}}</h4>
+                                             <span>{{cho.Work_roll}}</span>
                                         </div>
                                         <p>You really do help young creative minds to get quality education and professional job search assistance. I’d recommend it to everyone!</p>
                                         <div class="tst-rating">
@@ -748,9 +811,11 @@ https://templatemo.com/tm-516-known
                                              <i class="fa fa-star"></i>
                                         </div>
                                    </div>
+                                   {% endfor %}
                               </div>
+                              
 
-                              <div class="col-md-4 col-sm-4">
+                              {% comment %} <div class="col-md-4 col-sm-4">
                                    <div class="item">
                                         <div class="tst-image">
                                              <img src="static/images/tst-image2.jpg" class="img-responsive" alt="">
@@ -766,9 +831,9 @@ https://templatemo.com/tm-516-known
                                              <i class="fa fa-star"></i>
                                         </div>
                                    </div>
-                              </div>
+                              </div> {% endcomment %}
 
-                              <div class="col-md-4 col-sm-4">
+                              {% comment %} <div class="col-md-4 col-sm-4">
                                    <div class="item">
                                         <div class="tst-image">
                                              <img src="static/images/tst-image3.jpg" class="img-responsive" alt="">
@@ -785,9 +850,9 @@ https://templatemo.com/tm-516-known
                                              <i class="fa fa-star"></i>
                                         </div>
                                    </div>
-                              </div>
+                              </div> {% endcomment %}
 
-                              <div class="col-md-4 col-sm-4">
+                              {% comment %} <div class="col-md-4 col-sm-4">
                                    <div class="item">
                                         <div class="tst-image">
                                              <img src="static/images/tst-image4.jpg" class="img-responsive" alt="">
@@ -804,10 +869,9 @@ https://templatemo.com/tm-516-known
                                              <i class="fa fa-star"></i>
                                         </div>
                                    </div>
-                              </div>
+                              </div> {% endcomment %}
 
                          </div>
-
                </div>
           </div>
      </section> 
@@ -884,18 +948,30 @@ https://templatemo.com/tm-516-known
      </section>       
 
 
+
+
+
+     {% for i in obj %}
+     <iframe width="380px" height="210px" src="{% video i.video 'small'%}" loading="lazy" frameborder="0" allowfullscreen=""></iframe>
+     {% video i.video 'small'  %}
+     
+     {% endfor %}
+
      <!-- FOOTER -->
      <footer id="footer">
           <div class="container">
                <div class="row">
 
+                    <div class="footer-logo" >
+                         <h2 style="color:white;"><span>Krishnakala</span>DanceAcademy</h2>
+                       </div>
                     <div class="col-md-4 col-sm-6">
                          <div class="footer-info">
                               <div class="section-title">
                                    <h2>Headquarter</h2>
                               </div>
                               <address>
-                                   <p>1800 dapibus a tortor pretium,<br> Integer nisl dui, ABC 12000</p>
+                                   <p>Address: plot no.43,shlok hospital bassment, behind ashirwad hospita,<br> Hira Nagar, Sahyadri Nagar, Shirpur-Warwade, Maharashtra 425405,</p>
                               </address>
 
                               <ul class="social-icon">
@@ -905,9 +981,9 @@ https://templatemo.com/tm-516-known
                               </ul>
 
                               <div class="copyright-text"> 
-                                   <p>Copyright &copy; 2019 Company Name</p>
+                                   <p>Copyright &copy; 2023 KrishnakalaDanceAcademy</p>
                                    
-                                   <p>Design: TemplateMo</p>
+                                   <p>develop by: akshay sonawane</p>
                               </div>
                          </div>
                     </div>
@@ -918,8 +994,8 @@ https://templatemo.com/tm-516-known
                                    <h2>Contact Info</h2>
                               </div>
                               <address>
-                                   <p>+65 2244 1100, +66 1800 1100</p>
-                                   <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                                   <p>07947430971</p>
+                                   <p><a href="mailto:youremail.co">krishnakaladance1@gmail.com </a></p>
                               </address>
 
                               <div class="footer_menu">
@@ -941,11 +1017,8 @@ https://templatemo.com/tm-516-known
                               </div>
                               <div>
                                    <div class="form-group">
-                                        <form action="#" method="get">
-                                             <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="">
-                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
-                                        </form>
-                                        <span><sup>*</sup> Please note - we do not spam your email.</span>
+                                        <p>"Krishnakala dance academy(KKDA) born in February 2009 with a mission to enable anyone and everyone to dance and provide a platform to learn, practice, execute and experience DANCE as a way of life. KKDA is one of the leading dance companies of Dhule with its dance studio at Shirpur. The studio of KKDA is known as “Krishnakala Dance Academy”. The service offered by KKDA are: • Group Classes • Private Lessons • Choreographies • Corporate Workshops and • Event Performances.</p>
+                                        <span><sup>*</sup> Please note - make sure to read all terms & conditions before joining.</span>
                                    </div>
                               </div>
                          </div>

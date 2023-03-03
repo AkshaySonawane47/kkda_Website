@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 from Home import views
+# from Home.views import video
+
 from django.contrib.auth import views as auth_views  
 
 urlpatterns = [
@@ -13,16 +15,26 @@ urlpatterns = [
     path("register", views.register, name='registration.html'),
     # path('home/<int:id>',views.posts, name="posts.html"),
     path("submit", views.submit_form, name='demo1.html'),
+    path("submit_1", views.order_form, name='Category/order.html'),
     path("login", views.homelogin, name='login.html'),
     path("logout", views.logout, name='logout'),
-    path("dance", views.dance, name='dance.html'),
+    path("dance", views.dance, name='Category/dance.html'),
     path("home_2", views.home_2, name='home_2.html'),
-    path("music", views.music, name='music.html'),
-    path("wedding", views.wedding, name='wedding.html'),
-    path("zumba", views.zumba, name='zumba.html'),
-    path("personal_choreography", views.personal_choreography, name='personal_choreography.html'),
-    path("costume", views.costume, name='costume.html'),
-   
+    path("music", views.music, name='Category/music.html'),
+    path("wedding", views.wedding, name='Category/wedding.html'),
+    path("zumba", views.zumba, name='Category/zumba.html'),
+    path("personal_choreography", views.personal_choreography, name='Category/personal_choreography.html'),
+    path("costume", views.costume, name='Category/costume.html'),
+    path("order", views.order, name='Category/order.html'),
+
+    path("checkout", views.checkout, name='Category/checkout.html'),
+    # path("checkout_session", views.checkout_session, name='Category/checkout.html'),
+    path("pay_success", views.pay_success, name='Category/success.html'),
+    path("pay_cancel", views.pay_cancel, name='Category/cancel.html'),
+    path("gallery", views.gallery, name='gallery.html' ),
+    
+
+
 
 
     # path('change-password/',auth_views.PasswordChangeView.as_view(template_name='change-password.html',success_url = '/'),name='change-password'
