@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on http://127.0.0.1:8000/
+From: webmaster@localhost
+To: akshay.kkda@gmail.com
+Date: Tue, 17 Jan 2023 10:53:24 -0000
+Message-ID: <167395280438.3904.684272144817669546@DESKTOP-OI8TOTH>
+
+Someone asked for password reset for email akshay.kkda@gmail.com. Follow the linkbelow:
+http://http://127.0.0.1:8000/reset/MTg/bi6iv0-ac34014c080c402deb4cb96a6e1a6fc1/
+Your username, in case you've forgotten: 
+aksha
+-------------------------------------------------------------------------------

@@ -1,0 +1,161 @@
+{% load static %}
+<head>
+
+
+     <title>Known - Education HTML Template</title>
+<!-- 
+
+Known Template 
+
+https://templatemo.com/tm-516-known
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="static/css/owl.carousel.css">
+     <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+<!-- Meta tags -->
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+ 
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     {% comment %} <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section> {% endcomment %}
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+               </div>
+                    <!-- lOGO TEXT HERE -->
+                    <div class="navbar-brand">
+                         <br>
+                    <a href="#"><img src="static/images/kkda-logo.png" style="margin-left:-76px;" alt="" class="navbar-brand"></a>
+               
+               </div>
+               <!-- <a href="index.html"><img src="images/kkda-logo.png" alt="" class="navbar-brand"></a> -->
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#" class="smoothScroll">About</a></li>
+                         <li><a href="#team" class="smoothScroll">Our Teachers</a></li>
+                         <li><a href="#courses" class="smoothScroll">Courses</a></li>
+                         <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                    </ul>
+               </div>
+          </div>
+     </section>
+
+
+
+     {% if messages %}
+     {% for message in messages %}
+     <div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
+          <button type = "button" class = "close" data-dismiss = "alert">×</button>
+          <strong>Success!</strong> {{ message }}
+       </div>
+       {% endfor %}
+       {% endif %}
+
+     <section id="register">
+          <div class="container">
+               <div class="row">
+                    <center>
+                    {{msg}}
+               </center> 
+                    <div class="col-md-offset-2 col-md-8 col-sm-24">
+                    {% comment %} <section class="vh-50 gradient-custom"> {% endcomment %}
+                     
+                         <form action="submit" method="post"> 
+                           {% csrf_token %}
+                              <div class="container1">  
+                              <center> 
+                               <h1> Student addmission Form</h1> 
+                              </center>  
+                              <hr>  
+                              <label>First Name</label>
+                              <input type="text" name="firstname" placeholder="Firstname" required />
+                            <label> Middlename: </label>   
+                            <input type="text" name="middlename" placeholder="Middlename" size="15" required />   
+                            <label> Lastname: </label>    
+                            <input type="text" name="lastname" placeholder="Lastname" size="15"required />   
+                              
+                            {% comment %} <label>Gender</label>
+                            <div><b>   Male  <input type="radio" value="male" name="gender" > <b>  Female   <input type="radio" value="female"  name="gender" ></div> {% endcomment %}
+                            <h4>Gender : </h4><br>  
+                            <input type="radio"  name="gender" value="male">
+                            <label>male</label>
+                            <input type="radio"  name="gender" value="female">
+                            <label >female</label>
+                            <input type="radio"  name="gender" value="other">
+                            <label >other</label>
+                                                      
+                            
+                           <br> <label>  Phone :</label>     
+                            <input type="text" name="phone" placeholder="phone no." size="15"/ required>   
+                            <label> Address: </label>    
+                            <input type="text" name="address" placeholder="Address" size="15"required />   
+                                
+                             <label for="email"><b>Email</b></label>  
+                             <input type="text" placeholder="Enter Email" name="email" required>  
+                              
+                                {% comment %} <label for="psw"><b>Password</b></label>  
+                                <input type="password" placeholder="Enter Password" name="password" required>  
+                              
+                                <label for="psw-repeat"><b>Re-type Password</b></label>  
+                                <input type="password" placeholder="Retype Password" name="password_repeat" required>   {% endcomment %}
+                                <button type="submit" class="registerbtn">Register</button>    
+                            </form>                          
+         
+     </div>
+</div>
+
+     </section>
+
+
+
+     <script>
+          if ( window.history.replaceState ) {
+              window.history.replaceState( null, null, window.location.href );
+          }
+      </script>
+
+
+<html>
+</body>
+
+
+
+

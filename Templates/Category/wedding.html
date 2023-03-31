@@ -1,342 +1,634 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <meta charset="utf-8"> {% endcomment %}
+    <meta charset="UTF-8">
+{% comment %} <meta http-equiv="X-UA-Compatible" content="IE=Edge"> {% endcomment %}   
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
 
-     <title>Known - Education HTML Template</title>
-<!-- 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    {% comment %} <link rel="stylesheet" type="static/css/nav.css" href="nav.css" > {% endcomment %}
+    
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
 
-Known Template 
-
-https://templatemo.com/tm-516-known
-
--->
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="static/css/bootstrap.min.css">
-     <link rel="stylesheet" href="static/css/font-awesome.min.css">
-     <link rel="stylesheet" href="static/css/owl.carousel.css">
-     <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
-
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="static/css/templatemo-style.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="static/css/templatemo-style.css">
 <!-- Meta tags -->
-<meta charset = "utf-8">
-<meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
- 
-
-</head>
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
-     <!-- PRE LOADER -->
-     {% comment %} <section class="preloader">
-          <div class="spinner">
-
-               <span class="spinner-rotate"></span>
-               
-          </div>
-     </section> {% endcomment %}
+<script src="https://kit.fontawesome.com/667417c7ec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/css/nav.css">
+  </head>
+  <body id="top">
 
 
-     <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        
+        <!-- lOGO TEXT HERE -->
+        <div class="navbar-brand">
+             <br>
+        <a href="#"><img src="static/images/kkda-logo.png" style="margin-left:-76px;" alt="" class="navbar-brand"></a>
+
+   </div>
+        <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                     <span class="icon icon-bar"></span>
+                     <span class="icon icon-bar"></span>
+                     <span class="icon icon-bar"></span>
+                </button>
+           </div>
+           <!-- <a href="index.html"><img src="images/kkda-logo.png" alt="" class="navbar-brand"></a> -->
+
+           <!-- MENU LINKS -->
+           <div class="collapse navbar-collapse" style="padding-right: 1px; padding-left: 18px;">
+            <ul class="nav navbar-nav navbar-right" style="padding-right: 10px; padding-left: 18px;">  
+            <ul class="nav navbar-nav navbar-nav-first">
+                     <li><a href="base" class="smoothScroll">Home</a></li>
+                     <li><a href="#top" class="smoothScroll">Payments/Pricing</a></li>
+                     <li><a href="demo1" class="smoothScroll">addmission form</a></li>
+                     <li><a href="Score" class="smoothScroll">Score</a></li>
+                     {% comment %} <li><a href="#testimonial" class="smoothScroll">Reviews</a></li> {% endcomment %}
+                     <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                </ul> 
+                <ul class="nav navbar-nav navbar-right" style="padding-right: 6px; padding-left: 28px;">
+                     {% if user.is_authenticated %}
+                     <li><a>hello, {{user.username }}</a></li>
+                     <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
+                     {% else %}
+                     <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
+                     {%endif%}
+                </ul>
+              </ul>
+           </div>
+      </div>
+ </section>
+
+
+
+
+
+
+
+
+      <nav class="nav1 navbar  navbar-fixed-bottom bottom-nav-collapse" >
+        <a href="#" class="nav_link">
+          <i class="material-icons" style="color: #13324a;">home</i>
+          <span class="nav-text">home</span>
+        </a>
+        <a href="#" class="nav_link">
+          <i class="material-icons nav-icon" style="color: #13324a;">account_circle</i>
+          <span class="nav-text">Profile</span>
+        </a>
+        <a href="#" class="nav_link">
+          <i class="material-icons nav-icon"style="color: #13324a;">info</i>
+          <span class="nav-text">info</span>
+        </a>
+        <a href="#" class="nav_link">
+          <i class="material-icons nav-icon" style="color: #13324a;">event</i>
+          <span class="nav-text">event</span>
+        </a>
+        <a href="#" class="nav_link">
+          <i class="material-icons nav-icon" style="color: #13324a;">calendar_today</i>
+          <span class="nav-text">today_activity</span>
+        </a>
+      </nav>
+
+
+
+
+
+
+    <br>
+    {% comment %} ---------------------------------------------------------------------------------------------------------------------------- {% endcomment %}
+    
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    
+    
+    
+    
+    
+     
+          
+<section id="header" style="background-color: darkgray;">
+  <div class="container">
+        <div class="row">  
+    
+    
           <div class="container">
-
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
+               <center>
+                    <h6>This Page is </h6>
+               </center>
+               <div class="top">
+                   
                </div>
-                    <!-- lOGO TEXT HERE -->
-                    <div class="navbar-brand">
-                         <br>
-                    <a href="#"><img src="static/images/kkda-logo.png" style="margin-left:-76px;" alt="" class="navbar-brand"></a>
+          
+               <h1>UNDER CONSTRUCTION</h1>
+              <center><h3>Know more Click The Belowe Bottom</h3>
+              </center>
+          
                
+               <div class="social-icons">
+                   <a href="https://www.facebook.com/Krishnakaladance/"><i class="fab fa-facebook"></i></a>
+                   {% comment %} <a href="#your-twitter-profile"><i class="fab fa-twitter"></i></a> {% endcomment %}
+                   <a href="#your-linkedin-page"><i class="fab fa-linkedin-in"></i></a>
+                   <a href="https://www.instagram.com/krishnakala_d_academy/"><i class="fab fa-instagram"></i></a>
+                   <a href="https://www.youtube.com/channel/UCPML1e5MGzVHL3cedzc9S_Q"><i class="fab fa-youtube"></i></a>
+                   {% comment %} <a href="#rss"><i class="fas fa-rss"></i></a> {% endcomment %}
+       
                </div>
-               <!-- <a href="index.html"><img src="images/kkda-logo.png" alt="" class="navbar-brand"></a> -->
+           </div>
+          
+    
+    
+       <br>
+       <br>
 
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="" class="smoothScroll">Home</a></li>
-                         <li><a href="#top" class="smoothScroll">Payments/Pricing</a></li>
-                         <li><a href="demo1" class="smoothScroll">addmission form</a></li>
-                         <li><a href="#courses" class="smoothScroll">Courses</a></li>
-                         <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
-                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
-                    </ul> 
-                    <ul class="nav navbar-nav navbar-right">
-                         {% if user.is_authenticated %}
-                         <li><a>hello, {{user.username }}</a></li>
-                         <li><a href="logout"><i class="fa fa-sign-in"></i>logout</a></li>
-                         {% else %}
-                         <li><a href="#Login"><i class="fa fa-sign-in"></i>Login/Registration</a></li>
-                         {%endif%}
-                    </ul>
-               </div>
-          </div>
-     </section>
-
- 
+    </div>
+    </div>
+</section>
+    
+       <!-- FEATURE -->
+       <section id="feature">
+        <div class="container">
+             <div class="row">
+    
+                 
 
 
-     <!-- HOME -->
-     <section id="home">
-          <div class="row">
-               {% if messages %}
-               {% for message in messages %}
-               <div class = "alert alert-{{ message.tags }} alert-dismissible my-0 py-0">
-                    <button type = "button" class = "close" data-dismiss = "alert">×</button>
-                    <strong>'!</strong> {{ message }}
-                 </div>
-                 {% endfor %}
-                 {% endif %}
 
-                 <div class="owl-carousel owl-theme home-slider">
-                         {% for c in cat %}
-                         <div class"home-slider item-first" style="background-image: url(../media/{{c.image}});">                                                
-                              <div class="caption">
-                                <div class="container">                                        
-                                        <div class="col-md-6 col-sm-12">
-                                             <h1>Distance Learning Education Center {{c.title}}</h1>
-                                             <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
-                                             <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
-                                        </div>
-                                   </div> 
-                              </div>
-                         </div>
-                         
-                         {% comment %} <div class="item item-second">
-                              <div class="caption">
-                                   <div class="container">
-                                        <div class="col-md-6 col-sm-12">
-                                             <h1>Start your journey with our practical courses</h1>
-                                             <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
-                                             <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="item item-third">
-                              <div class="caption">
-                                   <div class="container">
-                                        <div class="col-md-6 col-sm-12">
-                                             <h1>Efficient Learning Methods</h1>
-                                             <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
-                                             <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div> {% endcomment %}
-                         {% endfor %}
-                    </div>
-          </div>
-     </section>
-
-
-     <!-- FEATURE -->
-     <section id="feature">
+             </div>
+        </div>
+    </section>
+    
+    
+       <!-- <section id="feature"> -->
+        <section id="header">
           <div class="container">
-               <div class="row">
-
+               <div class="row">   
                    
                </div>
           </div>
      </section>
-
-
-
-
-
-     <!-- <section id="feature"> -->
-          <section id="header">
-          <div class="container">
-               <div class="row">   
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
-                              <h2>Pricing <small>Find Your sutable course</small></h2>
-                         </div>
-                    </div>        
-                    <div class="col-md-4 col-sm-4">
-                         <div class="price-col">
-                         <div class="feature-thumb">
-                              <p>Starter</p>                                                
-                              <h3>₹1900/ month</h3>
-                              <ul>
-                                   <li>1 website asfs</li>
-                                   <li>1 website sdfasg eset</li>
-                                   <li>1 website asdtgtre</li>
-                                   <li>1 website aertr</li>
-                                   <li>1 website erter we4twet</li>
-                                   <li>1 website werterter</li>
-                                   <li>1 website erter</li> 
-                              </ul>
-                              <button>Get started</button>
-                         </div>
-                         </div>
-                    </div>
-<br>
-                    <div class="col-md-4 col-sm-4">
-                         <div class="price-col">
-                         <div class="feature-thumb">                   
-                                        <p>Intermediate</p>
-                                        <h3>₹1900/ month</h3>
-                                        <ul>
-                                             <li>1 website jhsgfsdfgia </li>
-                                             <li>1 website sadgag</li>
-                                             <li>1 website adadfgfdgfh</li>
-                                             <li>1 website efsggasdg </li>
-                                             <li>1 website adfgdfhdf</li>
-                                             <li>1 website adfhf</li>
-                                             <li>1 website dfhdfhad</li> 
-                                        </ul>
-                                        <button>Get started</button>
-                                   </div></div>
-                    </div>
-<br>
-                    <div class="col-md-4 col-sm-4">
-                         <div class="price-col">
-                         <div class="feature-thumb">                   
-                                   <p>Advance</p>
-                                   <h3>₹1900/ month</h3>
-                                   <ul>
-                                        <li>1 website </li>
-                                        <li>1 website </li>
-                                        <li>1 website </li>
-                                        <li>1 website </li>
-                                        <li>1 website </li>
-                                        <li>1 website </li>
-                                        <li>1 website </li> 
-                                   </ul>
-                                   <button>Get started</button>
-                              </div>
-                          </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-<br>
-<br>
-<br>
-
-
-
+    
 
 <!-- ======= Footer ======= -->
 <footer>
-    <div class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="footer-content">
-              <div class="footer-head">
-                <div class="footer-logo">
-                  <h2><span>Krishnakala</span>DanceAcademy</h2>
-                </div>
-  
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                <div class="footer-icons">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook-square"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>information</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <div class="footer-contacts">
-                  <p><span>Tel:</span> +123 456 789</p>
-                  <p><span>Email:</span> contact@example.com</p>
-                  <p><span>Working Hours:</span> 9am-5pm</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>Instagram</h4>
-                <div class="flicker-img">
-                  <a href="#"><img src="static/images/img/portfolio/1.jpg" alt=""></a>
-                  <a href="#"><img src="static/images/img/portfolio/kkda-01.jpg" alt=""></a>
-                  <a href="#"><img src="static/images/img/portfolio/kkda-02.JPG" alt=""></a>
-                  <a href="#"><img src="static/images/img/portfolio/3.jpg" alt=""></a>
-                  <a href="#"><img src="static/images/img/portfolio/kkda-03.jpg" alt=""></a>
-                  <a href="#"><img src="static/images/img/portfolio/6.jpg" alt=""></a>
-                  <a href="#"><img src="static/images/img/portfolio/6.jpg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-area-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="copyright text-center">
-              <p>
-                &copy; Copyright <strong>eBusiness</strong>. All Rights Reserved
-              </p>
-            </div>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
-            -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-  
-  
-       <!-- SCRIPTS -->
-       <script src="static/js/jquery.js"></script>
-       <script src="static/js/bootstrap.min.js"></script>
-       <script src="static/js/owl.carousel.min.js"></script>
-       <script src="static/js/smoothscroll.js"></script>
-       <script src="static/js/custom.js"></script>
-  
-  
-       <script>
-            if ( window.history.replaceState ) {
-                window.history.replaceState( null, null, window.location.href );
-            }
-        </script>
-  
+     <div class="footer-area">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-4">
+             <div class="footer-content">
+               <br>
+               <div class="footer-head">
+                 <div class="footer-logo">
+                   <h2><span>Krishnakala</span>DanceAcademy</h2>
+                 </div>
+   
+                 <p>"Krishnakala dance academy(KKDA) born in February 2009 with a mission to enable anyone and everyone to dance and provide a platform to learn, practice, execute and experience DANCE as a way of life. KKDA is one of the leading dance companies of Dhule with its dance studio at Shirpur. The studio of KKDA is known as “Krishnakala Dance Academy”. The service offered by KKDA are: • Group Classes • Private Lessons • Choreographies • Corporate Workshops and • Event Performances.</p>
+                 <div class="footer-icons">
+                   <ul>
+                     <li>
+                       <a href="#"><i class="fa fa-facebook-square"></i></a>
+                     </li>
+                     <li>
+                       <a href="#"><i class="fa fa-twitter"></i></a>
+                     </li>
+                     <li>
+                       <a href="#"><i class="fa fa-instagram"></i></a>
+                     </li>
+                     <li>
+                       <a href="#"><i class="fa fa-linkedin"></i></a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- end single footer -->
+           <div class="col-md-4">
+             <div class="footer-content">
+               <div class="footer-head">
+                 <h4>information</h4>
+                 <p>
+                     Krishnakala Dance Acadmy in Shirpur is situated right Behind Ashirwad Hospital..
+                     <br>plot no.43,shlok hospital bassment, behind ashirwad hospita, Hira Nagar, Sahyadri Nagar, Shirpur-Warwade, Maharashtra 425405
+                 </p>
+                 <div class="footer-contacts">
+                   <p><span>Phone:</span> 9096237900</p>
+                   <p><span>Email:</span> krishnakaladance1@gmail.com </p>
+                   <p><span>Working Hours:</span> 10am-9pm</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- end single footer -->
+           <div class="col-md-4">
+             <div class="footer-content">
+               <div class="footer-head">
+                 <h4>Instagram</h4>
+                 <div class="flicker-img">
+                   <a href="#"><img src="static/images/img/portfolio/1.jpg" alt=""></a>
+                   <a href="#"><img src="static/images/img/portfolio/kkda-01.jpg" alt=""></a>
+                   <a href="#"><img src="static/images/img/portfolio/kkda-02.JPG" alt=""></a>
+                   <a href="#"><img src="static/images/img/portfolio/3.jpg" alt=""></a>
+                   <a href="#"><img src="static/images/img/portfolio/kkda-03.jpg" alt=""></a>
+                   <a href="#"><img src="static/images/img/portfolio/6.jpg" alt=""></a>
+                   <a href="#"><img src="static/images/img/portfolio/6.jpg" alt=""></a> 
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="footer-area-bottom">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-12 col-sm-12 col-xs-12">
+             <div class="copyright text-center">
+               <p>
+                 &copy; Copyright <strong>KrishnakalaDanceAcademy</strong>. All Rights Reserved
+               </p>
+             </div>
+             <div class="credits">
+               <!--
+               All the links in the footer should remain intact.
+               You can delete the links only if you purchased the pro version.
+               Licensing information: https://bootstrapmade.com/license/
+               Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eBusiness
+             -->
+               {% comment %} Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> {% endcomment %}
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </footer><!-- End  Footer -->
+ 
+       
+            <!-- SCRIPTS -->
+            <script src="static/js/jquery.js"></script>
+            <script src="static/js/bootstrap.min.js"></script>
+            <script src="static/js/owl.carousel.min.js"></script>
+            <script src="static/js/smoothscroll.js"></script>
+            <script src="static/js/custom.js"></script>
+       
+       
+            <script>
+                 if ( window.history.replaceState ) {
+                     window.history.replaceState( null, null, window.location.href );
+                 }
+
+
+                 const progress = document.querySelector('.progress')
+                 const percentage = document.querySelector('.progress span')
+         
+                 let per = 0;
+                 function progressLoad(){
+                     if(per>=80){
+                         progress.style.width = `80%`;
+                         percentage.innerHTML = "80%"
+         
+                     }else{
+                         progress.style.width = `${per}%`;
+                         percentage.innerHTML = `${per}%`;
+         
+                     }
+                     per++
+         
+                 }
+         
+                 setInterval(progressLoad,90)
+             </script>
+    
+    
+             <style>
+             
+                .background {
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: url("https://vidyasheela.com/web-contents/website-components/Coming-Soon-Pages/website-under-construction-page-template-html/construction.jpg") #08093cb3;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-blend-mode: darken;
+                    filter: blur(10px);
+                    z-index: -1;
+                }
+                
+                
+                .top p{
+                    font-size: 16px;
+                    width: 258px;
+                    text-align: center;
+                    
+                    }
+                .top {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 900;
+                    margin: 10px;
+               
+                }
+                
+                hr {
+                    width: 100px;
+                    color: white;
+                    border-radius: 5px;
+                    margin: 0 15px
+                }
+                
+                h1 {
+                    font-size: 60px;
+                    text-align: center;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                }
+                h3{
+                    margin-bottom: 10px;
+                }
+        
+                .social-icons {
+                    margin: 20px auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                
+                a {
+                    color: white;
+                }
+                
+                i {
+                    font-size: 35px;
+                    margin: 10px;
+                }
+                
+                .progress-wrapper {
+                    width: 100%;
+                    background: #2f2b2bc7;
+                    display: flex;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                }
+                
+                .progress {
+                    width: 0%;
+                    height: 10px;
+                    background: white;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: flex-end;
+                    /* transition: all 0.003 ease-in; */
+                }
+                
+                .progress span {
+                    color: white;
+                    position: relative;
+                    top: 13px;
+                    left: 25px;
+                    font-weight: 800;
+                }
+                @media screen and (max-width:640px) {
+             
+        
+                    h1 {
+                    font-size: 50px;
+                    }
+        
+                    i {
+                    font-size: 25px;
+                    margin: 10px;
+                }
+                }
+                @media screen and (max-width:400px) {
+                    h1 {
+                    font-size: 30px;
+                    }
+                }
+               
+                              .nav1{
+                               {% comment %} position: fixed;
+                               bottom: 0;
+                               width: 100%;
+                               height: 55px;
+                               box-shadow:0 0 3px rgba(0,0,0,0.2) ;
+                               background-color: #ffffff;
+                               overflow: auto; {% endcomment %}
+                               display: none;
+                             }
+                           
+                             @media (max-width: 767px) {
+                               .custom-navbar .navbar-brand img {
+                                 margin: -45px;
+                                 height: 103px;
+                                 float: left;
+                                 font-weight: 150;
+                                 font-weight: bold;
+                                 padding: 0px 21px 12px 5px;
+                               }
+                               .custom-navbar{
+                                 background: #ffffff;
+                                 -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+                                 -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+                                 box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+                                 padding: 0px 40px;
+                                 {% comment %} text-align: left;
+                                 margin-left: 0px; {% endcomment %}
+                                 }
+                                
+           
+                 .nav1{
+                   position: fixed;
+                   bottom: 0;
+                   width: 100%;
+                   height: 55px;
+                   box-shadow:0 0 3px rgba(0,0,0,0.2) ;
+                   background-color: #ffffff;
+                   overflow: auto;
+                   display: flex;
+           
+                   background: #ffffff;
+                   -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+                   -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+                   box-shadow: 0 1px 30px rgba(0, 0, 0, 0.3);
+                   padding: 0px 4px;
+                 }
+               
+                 .nav_link{
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+                   flex-grow: 1;
+                   min-width: 50px;
+                   overflow: hidden;
+                   white-space: nowrap;
+                   font-family: sans-serif;
+                   font-size: 14px;
+                   color: #444444;
+                   text-decoration: none;
+                   -webkit-top-highlight-color:transparent ;
+                   transition: background-color 0.1s ease-in-out;
+               }               
+               .button {
+                    background-color: #4CAF50; /* Green */
+                    border: none;
+                    color: white;
+                    padding: 5px 34px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    border-radius: 20px;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    transition-duration: 0.4s;
+                    cursor: pointer;
+                  }
+               .button2 {
+                    background-color: white; 
+                    color: black; 
+                    border: 2px solid #008CBA;
+                    margin: 8px;  
+                  }
+               .button2:hover {
+                    background-color: #008CBA;
+                    color: white;
+                  }
+                  .button3 {
+                    background-color: white;
+                   color: black;
+                   border: 2px solid #008CBA;
+                   border-radius: 90%;
+                   height: 34px;
+                   padding: 0px;
+                   font-size: 10px;
+                  }
+               .button3:hover {
+                    background-color: #9E9E9E;
+                    color: white;
+                  }
+               
+                  @media (max-width: 767px) {
+                    .slider-area {
+                      margin-top: 60px;
+                    }
+             
+                     .popup {
+                       display: none;
+                       position: fixed;
+                       top: 50%;
+                       left: 50%;
+                       transform: translate(-50%, -50%);
+                       background-color: white;
+                       padding: 20px;
+                       border: 1px solid black;
+                     }
+                 
+                     .popup:target {
+                       display: block;
+                     }
+                  
+                   
+                 
+                 {% comment %} ========================================================================================================= {% endcomment %}
+           
+                      {% comment %} table,table-striped, th, td,table {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        margin: 0px;
+                         
+                      }
+                      th, td, table table-striped {
+                        padding: 5px;
+                        text-align: left;
+                        line-height: 1.328571;
+                        vertical-align: inherit;
+                      } {% endcomment %}
+                  
+                    .modal-content{
+                   position: relative;
+                   background-color: #fff;
+                   -webkit-background-clip: padding-box;
+                   background-clip: padding-box;
+                   border: 1px solid #999;
+                   border: 1px solid rgba(0,0,0,.2);
+                   border-radius: 6px;
+                   outline: 0;
+                   -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+                   box-shadow: 0 3px 9px rgba(0,0,0,.5);    
+                    }
+               
+               
+                    .button2 {
+                         background-color: white; 
+                         color: black; 
+                         border: 2px solid #008CBA;
+                    }
+               
+                    .button{
+                         background-color: #337ab7;
+                         border: none;
+                         color: white;
+                         padding: 4px 18px;
+                         text-align: center;
+                         text-decoration: none;
+                         display: inline-block;
+                         border-radius: 20px;
+                         font-size: 14px;
+                         margin: 4px 2px;
+                         transition-duration: 0.4s;
+                         cursor: pointer;
+               
+                    }
+                    .button2:hover {
+                         background-color: white;
+                         color: black;
+               
+                       }
+               
+                    .button3 {
+                      background-color: white; 
+                      color: black; 
+                      border: 2px solid #008CBA;
+                      height: 31px;
+                    }
+                 .button3:hover {
+                      background-color: #9E9E9E;
+                      color: white;
+                    }
+                    
+                         /* The actual popup */
+                         .popup .popuptext {
+                      
+                         width: 156px;
+                         background-color: #555;
+                         color: #fff;
+                         text-align: center;
+                         border-radius: 6px;
+                         padding: 8px 0;
+                         }
+           
+           
+               }
+             
+                    @media (max-width: 767px) {
+                     .table{
+                     font-size: 9px;
+                     margin-left: 7px;
+                    }
+                   }
+                    </style>
+
+
   </body>
-  </html>
+</html>
