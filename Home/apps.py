@@ -6,11 +6,11 @@ class HomeConfig(AppConfig):
     name = 'Home'
 
 
-    # icon_name = 'Home'
-class DanceConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Dance'
-    # icon_name = 'Home' 
+#     # icon_name = 'Home'
+# class DanceConfig(AppConfig):
+#     default_auto_field = 'django.db.models.BigAutoField'
+#     name = 'Dance'
+#     # icon_name = 'Home' 
 
 
 
