@@ -180,12 +180,12 @@ DEFAULT_FROM_EMAIL = "akshay.sonawane0239@gmail.com"
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'), 
+    os.path.join(BASE_DIR, 'Home\static'), 
     # '/kkda_website/kkda_website/static/',
 ]
 
 
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATICFILES_DIRS = os.path.join(BASE_DIR,'Home\static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
