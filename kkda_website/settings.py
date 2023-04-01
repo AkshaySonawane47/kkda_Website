@@ -184,6 +184,12 @@ STATICFILES_DIRS = [
     # '/kkda_website/kkda_website/static/',
 ]
 
+
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+
+
 LOGIN_REDIRECT_URL = 'home'
 
 # STATICFILES_DIRS = [
@@ -219,9 +225,6 @@ AUTH_TOKEN = 'ca4695098cc6ef7afc1effdde7469cfa'
 
 
 
-
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
  
 
