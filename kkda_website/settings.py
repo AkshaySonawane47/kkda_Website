@@ -94,7 +94,7 @@ ROOT_URLCONF = 'kkda_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "Templates")],
+        'DIRS': [os.path.join(BASE_DIR, "Home/Templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -180,12 +180,15 @@ DEFAULT_FROM_EMAIL = "akshay.sonawane0239@gmail.com"
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'Home\static'), 
+    os.path.join(BASE_DIR, 'static'), 
     # '/kkda_website/kkda_website/static/',
 ]
 
 
-STATICFILES_DIRS = os.path.join(BASE_DIR,'Home\static'),
+# \Users\com\Desktop\django-invoices-master
+STATIC_ROOT = 'Users\com\Desktop\kkda_website\kda_website'
+
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
